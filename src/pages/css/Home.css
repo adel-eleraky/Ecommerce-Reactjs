@@ -1,0 +1,28 @@
+.gap-10 {
+    gap: 10px ;
+  }
+  .gap-15 {
+    gap: 15px
+  }
+  /* start banner  */
+  .banner-content {
+    top: 10%;
+    left: 5%;
+  }
+  .banner-content p:nth-child(1) {
+    color: #cd7d05;
+  } 
+  .banner-content button, 
+  .banner-content button:hover {
+    background-color: #2b273e;
+  }
+  .secondary-banner h2 {
+    font-size: 22px;
+  }
+  /* end banner  */
+  
+  .categories .row,
+  .marquee .row {
+    box-shadow: 0 0 17px -7px gray;
+  }
+  

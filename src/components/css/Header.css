@@ -1,0 +1,43 @@
+/* start header  */
+.first-header {
+    background-color: #2b273e;
+    color: white;
+    border-bottom: 1px solid #ffffff8f;
+}
+
+.second-header {
+    background-color: #2b273e;
+    color: white;
+}
+
+.second-header .search-span {
+    border-radius: 0 8px 8px 0;
+    background-color: #e7c36c;
+}
+.second-header nav {
+    background-color: #2b273e !important;
+}
+.second-header nav * {
+    color: white;
+}
+@media (min-width: 1400px) {
+    .second-header nav li {
+        width: 20%;
+    }
+}
+@media (min-width: 460px ) and (max-width: 992px){
+    .second-header nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .second-header nav li {
+        width: 50%;
+    }
+}
+.third-header {
+    background-color: #49455b;
+    color: white;
+}
+
+
+/* end header  */

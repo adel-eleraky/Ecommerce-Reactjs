@@ -1,0 +1,10 @@
+/* start services  */
+@media (max-width: 576px) {
+    .service {
+      width: 75%;
+      margin: auto;
+      justify-content: center;
+    }
+    
+  }
+  /* end service  */

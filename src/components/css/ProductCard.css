@@ -1,0 +1,23 @@
+/* start featured products */
+.featured-product {
+    box-shadow: 0px 0px 16px -7px gray;
+    overflow: hidden;
+    background-color: white;
+  }
+  .featured-product .product-brand {
+    color: #cd7d05;
+  
+  }
+  .featured-product .wish-icon {
+    top: 5%;
+    right: 5%;
+  }
+  .featured-product .icons {
+    top: 12%;
+    right: -20%;
+    transition: .5s;
+  }
+  .featured-product:hover  .icons {
+    right: 5%;
+  }
+  /* end featured products */

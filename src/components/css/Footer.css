@@ -1,0 +1,26 @@
+/* start footer  */
+footer {
+    background-color: #49455b;
+    color: white;
+}
+.first-footer img {
+  margin-right: 10px;
+  height: 35px;
+}
+.first-footer,
+.second-footer {
+  border-bottom: 1px solid #ffffff8f;
+}
+.first-footer .subscribe-span {
+  border-radius: 0 8px 8px 0;
+  padding: 3px;
+}
+.first-footer .subscribe-span button {
+  background-color: #49455b;
+}
+footer .creator-name {
+  letter-spacing: 3px;
+  font-size: 21px;
+}
+  /* end footer  */
+  
