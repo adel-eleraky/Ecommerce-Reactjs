@@ -1,0 +1,16 @@
+.main-content {
+    box-shadow: 0 0 17px -7px gray;
+}
+.main-content .heading div:last-of-type {
+    width: 125px;
+}
+.main-content .heading img {
+    width: 25px;
+    background-color: #8080804f;
+    padding: 3px;
+    border-radius: 2px;
+    height: 30px;
+}
+.main-content .heading img.active {
+    background-color: var(--secondary-color);
+}

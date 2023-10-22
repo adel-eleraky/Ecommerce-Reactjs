@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import ProductCard from '../components/ProductCard'
-import  Marquee  from 'react-fast-marquee';
+import Marquee from 'react-fast-marquee';
 import BlogCard from '../components/BlogCard';
 import SpecialProduct from '../components/SpecialProduct';
 import Service from '../components/Service';
@@ -16,7 +16,7 @@ function Home() {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-xl-6 mb-3 mb-xl-0">
-                            <div className="main-banner position-relative ">
+                            <div className="main-banner position-relative " data-aos="zoom-out-right" data-aos-duration="1000">
                                 <img className='img-fluid w-100  rounded' src="images/catbanner-01.jpg" alt="" />
                                 <div className="banner-content position-absolute">
                                     <p>SUPERCHARGED FOR PROS</p>
@@ -29,7 +29,7 @@ function Home() {
                         <div className="col-12 col-xl-6 ">
                             <div className="row ">
                                 <div className="col-12 col-sm-6 mb-3 ">
-                                    <div className="secondary-banner position-relative  ">
+                                    <div className="secondary-banner position-relative  " data-aos="zoom-out-left" data-aos-duration="500">
                                         <img className='img-fluid w-100  rounded' src="images/catbanner-02.jpg" alt="" />
                                         <div className="banner-content position-absolute">
                                             <p>BEST SALE</p>
@@ -39,7 +39,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className="col-12 col-sm-6 mb-3">
-                                    <div className="secondary-banner position-relative  ">
+                                    <div className="secondary-banner position-relative  " data-aos="zoom-out-left" data-aos-duration="1000">
                                         <img className='img-fluid w-100  rounded' src="images/catbanner-03.jpg" alt="" />
                                         <div className="banner-content position-absolute">
                                             <p>BEST SALE</p>
@@ -49,7 +49,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className="col-12 col-sm-6 mb-3">
-                                    <div className="secondary-banner position-relative  ">
+                                    <div className="secondary-banner position-relative  " data-aos="zoom-out-left" data-aos-duration="1500">
                                         <img className='img-fluid w-100  rounded' src="images/catbanner-04.jpg" alt="" />
                                         <div className="banner-content position-absolute">
                                             <p>BEST SALE</p>
@@ -59,7 +59,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className="col-12 col-sm-6 mb-3">
-                                    <div className="secondary-banner position-relative  ">
+                                    <div className="secondary-banner position-relative  " data-aos="zoom-out-left" data-aos-duration="2000">
                                         <img className='img-fluid w-100  rounded' src="images/catbanner-01.jpg" alt="" />
                                         <div className="banner-content position-absolute">
                                             <p>BEST SALE</p>
@@ -68,7 +68,7 @@ function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ function Home() {
             </section>
             <section className="services py-4">
                 <div className="container">
-                    <div className="row">
+                    <div className="row " >
                         <Service img="service.png" title="Free Shipping" description="from all orders over $100" />
                         <Service img="service-02.png" title="Dally Surprise Offers" description="save up to 25% off" />
                         <Service img="service-03.png" title="Support 24/7" description="shop with an expert" />
@@ -86,15 +86,31 @@ function Home() {
             </section>
             <section className="categories py-5">
                 <div className="container">
-                    <div className="row" >
-                        <Category img="laptop.jpg" title="computers & laptop" numOfItems="8" />
-                        <Category img="camera.jpg" title="Cameras & videos" numOfItems="10" />
-                        <Category img="tv.jpg" title="smart television" numOfItems="12" />
-                        <Category img="tv.jpg" title="smartwatches" numOfItems="13" />
-                        <Category img="tv.jpg" title="Mobile & tablets" numOfItems="9" />
-                        <Category img="headphone.jpg" title="Headphones" numOfItems="8" />
-                        <Category img="acc.jpg" title="Accessories" numOfItems="8" />
-                        <Category img="speaker.jpg" title="portable Speakers" numOfItems="8" />
+                    <div className="row bg-white" >
+                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                            <Category img="laptop.jpg" title="computers & laptop" numOfItems="8" />
+                        </div>
+                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                            <Category img="camera.jpg" title="Cameras & videos" numOfItems="10" />
+                        </div>
+                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                            <Category img="tv.jpg" title="smart television" numOfItems="12" />
+                        </div>
+                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                            <Category img="tv.jpg" title="smartwatches" numOfItems="13" />
+                        </div>
+                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                            <Category img="tv.jpg" title="Mobile & tablets" numOfItems="9" />
+                        </div>
+                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                            <Category img="headphone.jpg" title="Headphones" numOfItems="8" />
+                        </div>
+                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                            <Category img="acc.jpg" title="Accessories" numOfItems="8" />
+                        </div>
+                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                            <Category img="speaker.jpg" title="portable Speakers" numOfItems="8" />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -102,22 +118,22 @@ function Home() {
                 <div className="container">
                     <h3 className='pt-4'>Featured Collection</h3>
                     <div className="row py-3">
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 ">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3  " >
                             <ProductCard />
                         </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 ">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3  ">
                             <ProductCard />
                         </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 ">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3  ">
                             <ProductCard />
                         </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 ">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3  ">
                             <ProductCard />
                         </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 ">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3  ">
                             <ProductCard />
                         </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 ">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3  ">
                             <ProductCard />
                         </div>
                     </div>
@@ -127,11 +143,21 @@ function Home() {
                 <div className="container">
                     <h3 className='mb-3'>Special Products</h3>
                     <div className="row">
-                        <SpecialProduct />
-                        <SpecialProduct />
-                        <SpecialProduct />
-                        <SpecialProduct />
-                        <SpecialProduct />
+                        <div className="col-12 col-lg-6 col-xl-4 mb-2  " data-aos="fade-up" >
+                            <SpecialProduct />
+                        </div>
+                        <div className="col-12 col-lg-6 col-xl-4 mb-2  " data-aos="fade-up" >
+                            <SpecialProduct />
+                        </div>
+                        <div className="col-12 col-lg-6 col-xl-4 mb-2  " data-aos="fade-up" >
+                            <SpecialProduct />
+                        </div>
+                        <div className="col-12 col-lg-6 col-xl-4 mb-2  " data-aos="fade-up" >
+                            <SpecialProduct />
+                        </div>
+                        <div className="col-12 col-lg-6 col-xl-4 mb-2  " data-aos="fade-up" >
+                            <SpecialProduct />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -139,7 +165,7 @@ function Home() {
                 <div className="container">
                     <h3 className='mb-3'>Our Popular Products</h3>
                     <div className="row">
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" data-aos="fade-up" data-aos-duration="1000">
                             <div className="categories rounded  h-100">
                                 <div className="category d-flex align-items-center">
                                     <img src="images/watch.jpg" alt="" className="img-fluid" />
@@ -155,7 +181,7 @@ function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" data-aos="fade-up" data-aos-duration="1000">
                             <div className="product-offer h-100 bg-dark p-3 rounded">
                                 <div className="content text-white">
                                     <p>15% OFF</p>
@@ -165,16 +191,16 @@ function Home() {
                                 <img src="images/product-offer.png" alt="" className="img-fluid" />
                             </div>
                         </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" >
                             <ProductCard />
                         </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" >
                             <ProductCard />
                         </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" >
                             <ProductCard />
                         </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" >
                             <ProductCard />
                         </div>
                     </div>
@@ -200,10 +226,18 @@ function Home() {
                 <div className="container">
                     <h3 className='mb-3'>Out Latest News</h3>
                     <div className="row">
-                        <BlogCard />
-                        <BlogCard />
-                        <BlogCard />
-                        <BlogCard />
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 " >
+                            <BlogCard />
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 " >
+                            <BlogCard />
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 " >
+                            <BlogCard />
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 " >
+                            <BlogCard />
+                        </div>
                     </div>
                 </div>
             </section>

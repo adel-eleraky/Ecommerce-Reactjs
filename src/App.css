@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --main-color : #2b273e;
+  --secondary-color: #de9d00;
+}
 a {
   text-decoration: none;
   color: white;

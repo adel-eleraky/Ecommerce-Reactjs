@@ -32,7 +32,7 @@ function Header() {
                         </div>
                         <div className="col-lg-6 col-sm-12 ">
                             <nav className="navbar navbar-expand-lg ">
-                                <div className="container-fluid ">
+                                <div className="container-fluid justify-content-center">
                                     <button className="navbar-toggler bg-white mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                         <span className="navbar-toggler-icon"></span>
                                     </button>
@@ -108,7 +108,7 @@ function Header() {
                                 <Link className="me-3 text-white">
                                     HOME
                                 </Link>
-                                <Link className="me-3 text-white">
+                                <Link to="/products" className="me-3 text-white">
                                     OUR STORE
                                 </Link>
                                 <Link className="me-3 text-white">

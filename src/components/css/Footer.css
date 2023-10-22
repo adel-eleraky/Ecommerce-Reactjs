@@ -1,6 +1,6 @@
 /* start footer  */
 footer {
-    background-color: #49455b;
+    background-color: var(--main-color);
     color: white;
 }
 .first-footer img {
@@ -16,7 +16,7 @@ footer {
   padding: 3px;
 }
 .first-footer .subscribe-span button {
-  background-color: #49455b;
+  background-color: var(--main-color);
 }
 footer .creator-name {
   letter-spacing: 3px;

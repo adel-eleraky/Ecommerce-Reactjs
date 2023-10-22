@@ -6,7 +6,7 @@ import "./css/ProductCard.css"
 function ProductCard() {
     return (
         <>
-            <div className="featured-product border p-3 position-relative rounded">
+            <div className="featured-product border p-3 mb-3 position-relative rounded" data-aos="fade-up" data-aos-duration="1000">
                 <img src="images/wish.svg" className='position-absolute wish-icon'/>
                 <div className="icons position-absolute">
                     <img src="images/prodcompare.svg" className='d-block mb-3' />

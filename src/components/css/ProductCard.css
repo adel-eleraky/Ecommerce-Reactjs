@@ -5,7 +5,7 @@
     background-color: white;
   }
   .featured-product .product-brand {
-    color: #cd7d05;
+    color: var(--secondary-color);
   
   }
   .featured-product .wish-icon {
