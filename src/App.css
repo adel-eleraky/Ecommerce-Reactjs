@@ -3,8 +3,10 @@
   padding: 0;
 }
 :root {
-  --main-color : #2b273e;
-  --secondary-color: #de9d00;
+  --color-2b273e : #2b273e;
+  --color-49455b: #49455b;
+  --color-db5807: #db5807;
+  --color-febd69: #febd69;
 }
 a {
   text-decoration: none;

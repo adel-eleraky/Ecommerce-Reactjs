@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Layout from "./components/Layout"
 import Home from "./pages/Home"
 import Store from "./pages/Store"
+import Blog from "./pages/Blog"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Home />}/>
                         <Route path="products" element={<Store />}/>
+                        <Route path="blog" element={<Blog />}/>
                     </Route>
                 </Routes>
             </BrowserRouter>

@@ -105,13 +105,13 @@ function Header() {
                         </div>
                         <div className="col-12 col-sm-9">
                             <div className="links ">
-                                <Link className="me-3 text-white">
+                                <Link to="" className="me-3 text-white">
                                     HOME
                                 </Link>
-                                <Link to="/products" className="me-3 text-white">
+                                <Link to="products" className="me-3 text-white">
                                     OUR STORE
                                 </Link>
-                                <Link className="me-3 text-white">
+                                <Link to="blog" className="me-3 text-white">
                                     BLOG
                                 </Link>
                                 <Link className="me-3 text-white">

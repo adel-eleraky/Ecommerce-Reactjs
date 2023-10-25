@@ -10,11 +10,11 @@
     left: 5%;
   }
   .banner-content p:nth-child(1) {
-    color: var(--secondary-color);
+    color: var(--color-db5807);
   } 
   .banner-content button, 
   .banner-content button:hover {
-    background-color: var(--main-color);
+    background-color: var(--color-2b273e);
   }
   .secondary-banner h2 {
     font-size: 22px;

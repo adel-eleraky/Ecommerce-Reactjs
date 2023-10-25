@@ -7,6 +7,7 @@ import SpecialProduct from '../components/SpecialProduct';
 import Service from '../components/Service';
 import Category from '../components/Category';
 import "./css/Home.css"
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -114,9 +115,12 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section className="featured-collection">
+            <section className="featured-collection py-4">
                 <div className="container">
-                    <h3 className='pt-4'>Featured Collection</h3>
+                    <div className="d-flex justify-content-between align-items-center">
+                        <h3>Featured Collection</h3>
+                        <Link to="/products#top" className='text-dark'>See More Products <i className="bi bi-arrow-right"></i></Link>
+                    </div>
                     <div className="row py-3">
                         <div className="col-12 col-sm-6 col-md-4 col-lg-3  " >
                             <ProductCard />

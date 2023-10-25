@@ -5,12 +5,12 @@
     background-color: white;
   }
   .special-product .brand {
-    color: var(--secondary-color);
+    color: var(--color-db5807);
   }
   .special-product .price span {
     color: red;
   }
   .special-product button {
-    background-color: var(--main-color);
+    background-color: var(--color-2b273e);
   }
   /* end special products */

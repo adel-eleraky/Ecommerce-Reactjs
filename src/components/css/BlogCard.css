@@ -8,7 +8,7 @@
     overflow-wrap: break-word;
   }
   .blog-post .blog-content button {
-    background-color: var(--main-color);
+    background-color: var(--color-2b273e);
     color: white;
     border-radius: 20px;
   }

@@ -1,21 +1,21 @@
 /* start header  */
 .first-header {
-    background-color: var(--main-color);
+    background-color: var(--color-2b273e);
     color: white;
     border-bottom: 1px solid #ffffff8f;
 }
 
 .second-header {
-    background-color: var(--main-color);
+    background-color: var(--color-2b273e);
     color: white;
 }
 
 .second-header .search-span {
     border-radius: 0 8px 8px 0;
-    background-color: var(--secondary-color);
+    background-color: var(--color-febd69);
 }
 .second-header nav {
-    background-color: var(--main-color) !important;
+    background-color: var(--color-2b273e) !important;
 }
 .second-header nav * {
     color: white;
@@ -35,7 +35,7 @@
     }
 }
 .third-header {
-    background-color: #49455b;
+    background-color: var(--color-49455b);
     color: white;
 }
 

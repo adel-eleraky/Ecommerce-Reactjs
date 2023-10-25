@@ -16,7 +16,7 @@ function StoreSidebar() {
                         <li className='mb-2 ms-2 fw-light fs-5'>mobiles</li>
                     </ul>
                 </div>
-                <div className="filter  bg-white rounded p-3 mb-3">
+                <div className="sidebar-filter  bg-white rounded p-3 mb-3">
                     <h5 className='mb-4'>Filter By</h5>
                     <div className="Availability py-3 ms-2 mb-3 border-top border-3">
                         <h6 className='mb-3'>Availability</h6>
