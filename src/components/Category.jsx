@@ -11,7 +11,7 @@ function Category({ img, title, numOfItems }) {
           <h6>{title}</h6>
           <p>{numOfItems} Items</p>
         </div>
-        <img src={`images/${img}`} />
+        <img src={`/images/${img}`} />
       </div>
     </>
   )

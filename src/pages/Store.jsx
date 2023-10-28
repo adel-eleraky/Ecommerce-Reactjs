@@ -11,8 +11,8 @@ function Store() {
     return (
         <>
             <div className="container py-5" >
-                <div className="row" id='top'>
-                    <div className="main-filter dropdown mb-4 d-none">
+                <div className="row" >
+                    <div className="main-filter dropdown mb-4 ">
                         <button className="btn btn-secondary btn-lg w-25 dropdown-toggle bg-white text-dark border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Filters
                         </button>

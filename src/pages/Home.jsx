@@ -18,7 +18,7 @@ function Home() {
                     <div className="row">
                         <div className="col-12 col-xl-6 mb-3 mb-xl-0">
                             <div className="main-banner position-relative " data-aos="zoom-out-right" data-aos-duration="1000">
-                                <img className='img-fluid w-100  rounded' src="images/catbanner-01.jpg" alt="" />
+                                <img className='img-fluid w-100  rounded' src="/images/catbanner-01.jpg" alt="" />
                                 <div className="banner-content position-absolute">
                                     <p>SUPERCHARGED FOR PROS</p>
                                     <h2 className='fw-bold mb-3'>Special Sale</h2>
@@ -31,7 +31,7 @@ function Home() {
                             <div className="row ">
                                 <div className="col-12 col-sm-6 mb-3 ">
                                     <div className="secondary-banner position-relative  " data-aos="zoom-out-left" data-aos-duration="500">
-                                        <img className='img-fluid w-100  rounded' src="images/catbanner-02.jpg" alt="" />
+                                        <img className='img-fluid w-100  rounded' src="/images/catbanner-02.jpg" alt="" />
                                         <div className="banner-content position-absolute">
                                             <p>BEST SALE</p>
                                             <h2 className=' mb-3'>Laptops Max</h2>
@@ -41,7 +41,7 @@ function Home() {
                                 </div>
                                 <div className="col-12 col-sm-6 mb-3">
                                     <div className="secondary-banner position-relative  " data-aos="zoom-out-left" data-aos-duration="1000">
-                                        <img className='img-fluid w-100  rounded' src="images/catbanner-03.jpg" alt="" />
+                                        <img className='img-fluid w-100  rounded' src="/images/catbanner-03.jpg" alt="" />
                                         <div className="banner-content position-absolute">
                                             <p>BEST SALE</p>
                                             <h2 className=' mb-3'>Buy IPad Air</h2>
@@ -51,7 +51,7 @@ function Home() {
                                 </div>
                                 <div className="col-12 col-sm-6 mb-3">
                                     <div className="secondary-banner position-relative  " data-aos="zoom-out-left" data-aos-duration="1500">
-                                        <img className='img-fluid w-100  rounded' src="images/catbanner-04.jpg" alt="" />
+                                        <img className='img-fluid w-100  rounded' src="/images/catbanner-04.jpg" alt="" />
                                         <div className="banner-content position-absolute">
                                             <p>BEST SALE</p>
                                             <h2 className=' mb-3'>Smartwatch 7</h2>
@@ -61,7 +61,7 @@ function Home() {
                                 </div>
                                 <div className="col-12 col-sm-6 mb-3">
                                     <div className="secondary-banner position-relative  " data-aos="zoom-out-left" data-aos-duration="2000">
-                                        <img className='img-fluid w-100  rounded' src="images/catbanner-01.jpg" alt="" />
+                                        <img className='img-fluid w-100  rounded' src="/images/catbanner-01.jpg" alt="" />
                                         <div className="banner-content position-absolute">
                                             <p>BEST SALE</p>
                                             <h2 className=' mb-3'>AirPods Max</h2>
@@ -172,15 +172,15 @@ function Home() {
                         <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" data-aos="fade-up" data-aos-duration="1000">
                             <div className="categories rounded  h-100">
                                 <div className="category d-flex align-items-center">
-                                    <img src="images/watch.jpg" alt="" className="img-fluid" />
+                                    <img src="/images/watch.jpg" alt="" className="img-fluid" />
                                     <p className='mb-0 active'>Smart Watch</p>
                                 </div>
                                 <div className="category d-flex align-items-center">
-                                    <img src="images/watch.jpg" alt="" className="img-fluid" />
+                                    <img src="/images/watch.jpg" alt="" className="img-fluid" />
                                     <p className='mb-0'>Smart Watch</p>
                                 </div>
                                 <div className="category d-flex align-items-center">
-                                    <img src="images/watch.jpg" alt="" className="img-fluid" />
+                                    <img src="/images/watch.jpg" alt="" className="img-fluid" />
                                     <p className='mb-0'>Smart Watch</p>
                                 </div>
                             </div>
@@ -192,7 +192,7 @@ function Home() {
                                     <h3>Smart Watch</h3>
                                     <p>From $399 or $16.62/mo for 24 mo. </p>
                                 </div>
-                                <img src="images/product-offer.png" alt="" className="img-fluid" />
+                                <img src="/images/product-offer.png" alt="" className="img-fluid" />
                             </div>
                         </div>
                         <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" >
@@ -214,14 +214,14 @@ function Home() {
                 <div className="container">
                     <div className="row bg-white">
                         <Marquee >
-                            <img src="images/brand-01.png" alt="" className="img-fluid px-4" />
-                            <img src="images/brand-02.png" alt="" className="img-fluid px-4" />
-                            <img src="images/brand-03.png" alt="" className="img-fluid px-4" />
-                            <img src="images/brand-04.png" alt="" className="img-fluid px-4" />
-                            <img src="images/brand-05.png" alt="" className="img-fluid px-4" />
-                            <img src="images/brand-06.png" alt="" className="img-fluid px-4" />
-                            <img src="images/brand-07.png" alt="" className="img-fluid px-4" />
-                            <img src="images/brand-08.png" alt="" className="img-fluid px-4" />
+                            <img src="/images/brand-01.png" alt="" className="img-fluid px-4" />
+                            <img src="/images/brand-02.png" alt="" className="img-fluid px-4" />
+                            <img src="/images/brand-03.png" alt="" className="img-fluid px-4" />
+                            <img src="/images/brand-04.png" alt="" className="img-fluid px-4" />
+                            <img src="/images/brand-05.png" alt="" className="img-fluid px-4" />
+                            <img src="/images/brand-06.png" alt="" className="img-fluid px-4" />
+                            <img src="/images/brand-07.png" alt="" className="img-fluid px-4" />
+                            <img src="/images/brand-08.png" alt="" className="img-fluid px-4" />
                         </Marquee>
                     </div>
                 </div>

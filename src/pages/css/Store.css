@@ -1,3 +1,6 @@
+.main-filter {
+    display: none;
+}
 .main-content {
     box-shadow: 0 0 17px -7px gray;
 }
@@ -12,6 +15,6 @@
         display: none;
     }
     .products-list-column {
-        width: 100%;
+        width: 100%; !important
     }
 }

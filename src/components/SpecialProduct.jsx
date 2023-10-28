@@ -10,9 +10,9 @@ function SpecialProduct() {
             <div className="special-product border p-3 d-flex rounded" data-aos="fade-up" data-aos-duration="1000">
                 <div className="image w-50 position-relative">
                     <span className="badge text-bg-warning position-absolute">-25%</span>
-                    <img src="images/laptop.jpg" alt="" className="img-fluid w-100" />
-                    <img src="images/laptop.jpg" alt="" className="img-fluid w-50" />
-                    <img src="images/laptop.jpg" alt="" className="img-fluid w-50" />
+                    <img src="/images/laptop.jpg" alt="" className="img-fluid w-100" />
+                    <img src="/images/laptop.jpg" alt="" className="img-fluid w-50" />
+                    <img src="/images/laptop.jpg" alt="" className="img-fluid w-50" />
                 </div>
                 <div className="content w-50 ps-3">
                     <div className="brand mb-2">Bejaj</div>

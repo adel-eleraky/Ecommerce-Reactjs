@@ -12,7 +12,7 @@ function Header() {
                         <div className="col-md-7 mb-3 mb-md-0">
                             Free shipping over 100$ and free return
                         </div>
-                        <a href="tel:+201554138144" className="col-md-5">
+                        <a href="tel:+201554138144" className="col-md-5 text-white">
                             Hotline: +20 1554138144
                         </a>
                     </div>
@@ -42,7 +42,7 @@ function Header() {
                                             <Link>
                                                 <div className="d-flex align-items-center gap-10">
                                                     <div>
-                                                        <img src="images/compare.svg" />
+                                                        <img src="/images/compare.svg" />
                                                     </div>
                                                     <p className="m-0">Compare  Products</p>
                                                 </div>
@@ -52,17 +52,17 @@ function Header() {
                                             <Link>
                                                 <div className="d-flex align-items-center gap-10">
                                                     <div>
-                                                        <img src="images/wishlist.svg" />
+                                                        <img src="/images/wishlist.svg" />
                                                     </div>
                                                     <p className="m-0">Favorite  Wishlist</p>
                                                 </div>
                                             </Link>
                                             </li>
                                             <li className="nav-item mb-4 mb-lg-0">
-                                            <Link>
+                                            <Link to="login">
                                                 <div className="d-flex align-items-center gap-10">
                                                     <div>
-                                                        <img src="images/user.svg" />
+                                                        <img src="/images/user.svg" />
                                                     </div>
                                                     <p className="m-0">Log in  My Account</p>
                                                 </div>
@@ -72,7 +72,7 @@ function Header() {
                                             <Link>
                                                 <div className="d-flex align-items-center gap-10">
                                                     <div>
-                                                        <img src="images/cart.svg" />
+                                                        <img src="/images/cart.svg" />
                                                     </div>
                                                     <p className="m-0"><span className="badge rounded-pill text-bg-light">0</span><br /> $100</p>
                                                 </div>
@@ -91,7 +91,7 @@ function Header() {
                     <div className="row py-3 align-items-center">
                         <div className="col-12 col-md-3 mb-4 mb-md-0" style={{ borderRight: "2px solid #d09905" }}>
                             <div className="dropdown">
-                                <button className="btn btn-secondary dropdown-toggle fw-bold border-0 bg-transparent p-0 w-100 d-flex align-items-center justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button className="btn btn-secondary dropdown-toggle text-white fw-bold border-0 bg-transparent p-0 w-100 d-flex align-items-center justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Shop Categories
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-dark mt-2 w-100">

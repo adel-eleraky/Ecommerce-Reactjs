@@ -10,7 +10,7 @@ function Footer() {
                 <div className="container">
                     <div className="row py-4 align-items-center">
                         <div className="col-12 col-md-5 mb-3 m-md-0 d-flex align-items-center">
-                            <img src="images/send.png" alt="" className="img-fluid" />
+                            <img src="/images/send.png" alt="" className="img-fluid" />
                             <h3>Sign Up For Our Newsletter</h3>
                         </div>
                         <div className="col-12 col-md-7">
