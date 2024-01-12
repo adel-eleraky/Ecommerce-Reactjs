@@ -20,11 +20,11 @@ function App() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Layout />}>
-                        <Route index element={<Home />} />
-                        <Route path="products" element={<Store />} />
-                        <Route path="blog" element={<Blog />} />
-                        <Route path="login" element={<Login />} />
+                    <Route path="/home" element={<Layout />}>
+                        <Route index element={<Home />}/>
+                        <Route path="products" element={<Store />}/>
+                        <Route path="blog" element={<Blog />}/>
+                        <Route path="login" element={<Login />}/>
                         <Route path="sign-up" element={<Signup />} />
                     </Route>
                 </Routes>
