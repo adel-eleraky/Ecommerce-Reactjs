@@ -1,0 +1,9 @@
+.signup-page .content {
+    box-shadow: 0px 0px 16px -7px gray;
+}
+.signup-page form button {
+    background-color: var(--color-2b273e);
+}
+.signup-page form button:hover {
+    background-color: var(--color-49455b);
+}
