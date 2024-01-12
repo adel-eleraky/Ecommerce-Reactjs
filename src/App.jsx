@@ -1,8 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 import "bootstrap-icons/font/bootstrap-icons.css"
-import "mdb-ui-kit/css/mdb.min.css"
-import "mdb-ui-kit/js/mdb.min.js"
 import './App.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Layout from "./components/Layout"
@@ -12,6 +10,7 @@ import Blog from "./pages/Blog"
 import Login from "./pages/Login"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Signup from "./pages/Signup"
 
 AOS.init();
 
@@ -21,11 +20,12 @@ function App() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/home" element={<Layout />}>
-                        <Route index element={<Home />}/>
-                        <Route path="products" element={<Store />}/>
-                        <Route path="blog" element={<Blog />}/>
-                        <Route path="login" element={<Login />}/>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Home />} />
+                        <Route path="products" element={<Store />} />
+                        <Route path="blog" element={<Blog />} />
+                        <Route path="login" element={<Login />} />
+                        <Route path="sign-up" element={<Signup />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
