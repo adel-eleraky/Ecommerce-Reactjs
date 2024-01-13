@@ -69,7 +69,7 @@ function Header() {
                                             </Link>
                                             </li>
                                             <li className="nav-item mb-4 mb-lg-0">
-                                            <Link>
+                                            <Link to="cart">
                                                 <div className="d-flex align-items-center gap-10">
                                                     <div>
                                                         <img src="/images/cart.svg" />
