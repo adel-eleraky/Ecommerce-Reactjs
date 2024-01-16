@@ -5,11 +5,11 @@ function Cart() {
     return (
         <>
             <div className="cart-page py-3">
-                <h3 className='text-center mb-3'>Your Cart</h3>
                 <div className="container">
+                    <h3 className='mb-3'>Your Cart</h3>
                     <div className="row">
-                        <div className="col-12 col-md-9">
-                            <table className="table bg-transparent">
+                        <div className='col-12 col-lg-8 table-container'>
+                            <table className="table">
                                 <thead>
                                     <tr>
                                         <th scope="col">Product</th>
@@ -49,9 +49,15 @@ function Cart() {
                                 </tbody>
                             </table>
                         </div>
-                        <div className="col-12 col-md-3">
-                            <h3 className='mb-3'>Total Price : 1000$</h3>
-                            <button className="btn text-white checkout-btn">Check Out</button>
+                        <div className="col-12 col-lg-4">
+                            <div className='cart-total'>
+                                <h3 className='mb-3'>Total Price : 1000$</h3>
+                                <div className="coupon-card">
+                                    <input className='coupon-input' type='text' name='coupon' placeholder='coupon code' />
+                                    <button className="btn coupon-btn text-white">Apply Coupon</button>
+                                </div>
+                                <button className="btn text-white checkout-btn">Proceed to Check Out</button>
+                            </div>
                         </div>
                     </div>
                 </div>
