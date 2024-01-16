@@ -1,19 +1,11 @@
 
 /* start categories */
-.category {
-    background-color: white;
-}
+
 .category .content > div {
     width: 50%;
   }
   .category .content {
     justify-content: center;
   }
-  @media (max-width: 576px) {
-    .category {
-      width: 75%;
-      margin: auto;
-    }
-    
-  }
+  
   /* end categories */

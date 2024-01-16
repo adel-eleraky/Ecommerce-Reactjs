@@ -20,7 +20,16 @@
     font-size: 22px;
   }
   /* end banner  */
-  
+  .categories .category {
+    background-color: white;
+  }
+  @media (max-width: 576px) {
+    .categories .category {
+      width: 75%;
+      margin: auto;
+    }
+    
+  }
   .categories .row,
   .marquee .row {
     box-shadow: 0 0 17px -7px gray;
