@@ -12,7 +12,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Signup from "./pages/Signup"
 import Cart from "./pages/Cart"
-import SingleProduct from "./pages/SingleProduct"
+import Product from "./pages/product"
 
 AOS.init();
 
@@ -25,7 +25,7 @@ function App() {
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Home />}/>
                         <Route path="products" element={<Store />}/>
-                        <Route path="products/:name" element={<SingleProduct />} />
+                        <Route path="products/:name" element={<Product />} />
                         <Route path="blog" element={<Blog />}/>
                         <Route path="login" element={<Login />}/>
                         <Route path="sign-up" element={<Signup />} />
