@@ -21,29 +21,32 @@ function Cart() {
                                 <tbody>
                                     <tr>
                                         <td className='d-flex align-items-center'>
+                                            <i className="bi bi-x-octagon delete-btn fs-5"></i>
                                             <img src="/images/speaker.jpg" alt="" className="img-fluid product-img" />
                                             <p>portable speaker</p>
                                         </td>
                                         <td>50$</td>
-                                        <td><input type="number" name="quantity" defaultValue="1" /><i className="fa-solid fa-trash-can ms-2 fs-5 trash-icon"></i></td>
+                                        <td><input type="number" name="quantity" defaultValue="1" /></td>
                                         <td>50$</td>
                                     </tr>
                                     <tr>
                                         <td className='d-flex align-items-center'>
+                                            <i className="bi bi-x-octagon delete-btn fs-5"></i>
                                             <img src="/images/speaker.jpg" alt="" className="img-fluid product-img" />
                                             <p>portable speaker</p>
                                         </td>
                                         <td>50$</td>
-                                        <td><input type="number" name="quantity" defaultValue="1" /><i className="fa-solid fa-trash-can ms-2 fs-5 trash-icon"></i></td>
+                                        <td><input type="number" name="quantity" defaultValue="1" /></td>
                                         <td>50$</td>
                                     </tr>
                                     <tr>
                                         <td className='d-flex align-items-center'>
+                                            <i className="bi bi-x-octagon delete-btn fs-5"></i>
                                             <img src="/images/speaker.jpg" alt="" className="img-fluid product-img" />
                                             <p>portable speaker</p>
                                         </td>
                                         <td>50$</td>
-                                        <td><input type="number" name="quantity" defaultValue="1" /><i className="fa-solid fa-trash-can ms-2 fs-5 trash-icon"></i></td>
+                                        <td><input type="number" name="quantity" defaultValue="1" /></td>
                                         <td>50$</td>
                                     </tr>
                                 </tbody>
