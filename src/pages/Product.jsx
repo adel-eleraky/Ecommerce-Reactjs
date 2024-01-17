@@ -14,7 +14,7 @@ function Product() {
             <div className="product-page py-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-md-6 ">
+                        <div className="col-12 col-md-6 mb-5 mb-md-0">
                             <ProductSwiper />
                         </div>
                         <div className="col-12 col-md-6 ">
@@ -37,7 +37,8 @@ function Product() {
                                     <h4 className='availability'>Availability: <span className='fw-light'>5 In-Stock</span></h4>
                                     <h4 className='quantity'>Quantity: <input type="number" name="quantity" defaultValue="1" /></h4>
                                 </div>
-                                <button className='btn text-white add-to-cart'>Add to Cart</button>
+                                <button className="btn add-to-cart text-dark fw-bold me-3"><i className="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                                <button className="btn add-to-wishlist text-dark fw-bold"><i className="fa-regular fa-heart me-2"></i>Add to WishList</button>
                             </div>
                         </div>
                     </div>
