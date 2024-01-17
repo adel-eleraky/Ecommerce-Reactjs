@@ -2,7 +2,7 @@ import React from 'react'
 import "./css/Product.css"
 import { useParams } from 'react-router-dom'
 import ReactStars from "react-rating-stars-component";
-import ProductSwiper from '../components/ProductSwiper';
+import ProductSwiper from './../components/ProductSwiper';
 
 
 function Product() {
