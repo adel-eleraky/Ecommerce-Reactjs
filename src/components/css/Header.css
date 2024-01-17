@@ -7,37 +7,48 @@
 
 .second-header {
     background-color: var(--color-2b273e);
-    color: white;
+    color: #ffffff;
 }
-
+@media (max-width: 992px) {
+    .second-header .search-col {
+        display: none;
+    }
+}
 .second-header .search-span {
     border-radius: 0 8px 8px 0;
     background-color: var(--color-febd69);
 }
-.second-header nav {
-    background-color: var(--color-2b273e) !important;
+.second-header .cart-icon,
+.second-header .bar-icon {
+    background-color: transparent;
+    border: none;
 }
-.second-header nav * {
-    color: white;
-}
-@media (min-width: 1400px) {
-    .second-header nav li {
-        width: 20%;
+@media (min-width: 768px) {
+    .second-header .bar-icon {
+        display: none;
+    }
+    .second-header .site-title {
+        margin: 0 !important;
     }
 }
-@media (min-width: 460px ) and (max-width: 992px){
-    .second-header nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .second-header nav li {
-        width: 50%;
+.second-header ul {
+    list-style: none;
+}
+.second-header ul li {
+    margin: 0 10px;
+}
+@media (max-width: 576px) {
+    .second-header .list-item p {
+        display: none;
     }
 }
 .third-header {
     background-color: var(--color-49455b);
     color: white;
 }
-
-
+@media (max-width: 768px) {
+    .third-header {
+        display: none;
+    }
+}
 /* end header  */

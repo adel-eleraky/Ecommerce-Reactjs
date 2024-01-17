@@ -2,6 +2,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./css/Header.css"
+import CartOffcanvas from "./CartOffcanvas";
+import NavOffcanvas from "./NavOffcanvas";
+
+
+
 
 function Header() {
     return (
@@ -21,8 +26,15 @@ function Header() {
             <header className="second-header">
                 <div className="container">
                     <div className="row py-2 align-items-center">
-                        <div className="col-2 mb-3 mb-lg-0"><h3>Digitic.</h3></div>
-                        <div className="col-md-8 col-lg-4 col-10 mb-3 mb-lg-0">
+                        <div className="col-2">
+                            <div className="d-flex">
+                                <button className="btn btn-primary bar-icon p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navOffcanvas" aria-controls="navOffcanvas">
+                                    <i className="fa-solid fa-bars fs-3"></i>
+                                </button>
+                                <h2 className="d-inline-block mb-0 ms-3 site-title">Digitic.</h2>
+                            </div>
+                        </div>
+                        <div className="col-4 search-col">
                             <div className="input-group">
                                 <input type="text" className="form-control" placeholder="Search Product Here" aria-label="Search Product Here" aria-describedby="basic-addon2" />
                                 <div className="input-group-append">
@@ -30,58 +42,39 @@ function Header() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6 col-sm-12 ">
-                            <nav className="navbar navbar-expand-lg ">
-                                <div className="container-fluid justify-content-center">
-                                    <button className="navbar-toggler bg-white mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span className="navbar-toggler-icon"></span>
-                                    </button>
-                                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                                        <ul className="navbar-nav w-100 justify-content-between mb-2 mb-lg-0">
-                                            <li className="nav-item mb-4 mb-lg-0">
-                                            <Link>
-                                                <div className="d-flex align-items-center gap-10">
-                                                    <div>
-                                                        <img src="/images/compare.svg" />
-                                                    </div>
-                                                    <p className="m-0">Compare  Products</p>
-                                                </div>
-                                            </Link>
-                                            </li>
-                                            <li className="nav-item mb-4 mb-lg-0">
-                                            <Link>
-                                                <div className="d-flex align-items-center gap-10">
-                                                    <div>
-                                                        <img src="/images/wishlist.svg" />
-                                                    </div>
-                                                    <p className="m-0">Favorite  Wishlist</p>
-                                                </div>
-                                            </Link>
-                                            </li>
-                                            <li className="nav-item mb-4 mb-lg-0">
-                                            <Link to="login">
-                                                <div className="d-flex align-items-center gap-10">
-                                                    <div>
-                                                        <img src="/images/user.svg" />
-                                                    </div>
-                                                    <p className="m-0">Log in  My Account</p>
-                                                </div>
-                                            </Link>
-                                            </li>
-                                            <li className="nav-item mb-4 mb-lg-0">
-                                            <Link to="cart">
-                                                <div className="d-flex align-items-center gap-10">
-                                                    <div>
-                                                        <img src="/images/cart.svg" />
-                                                    </div>
-                                                    <p className="m-0"><span className="badge rounded-pill text-bg-light">0</span><br /> $100</p>
-                                                </div>
-                                            </Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
+                        <div className="col-10 col-lg-6">
+                            <ul className="d-flex justify-content-end align-items-center mb-0">
+                                <li className="list-item">
+                                    <Link>
+                                        <div className="d-flex align-items-center gap-10">
+                                            <div>
+                                                <img src="/images/wishlist.svg" />
+                                            </div>
+                                            <p className="m-0">Wishlist</p>
+                                        </div>
+                                    </Link>
+                                </li>
+                                <li className="list-item">
+                                    <Link to="login">
+                                        <div className="d-flex align-items-center gap-10">
+                                            <div>
+                                                <img src="/images/user.svg" />
+                                            </div>
+                                            <p className="m-0">Account</p>
+                                        </div>
+                                    </Link>
+                                </li>
+                                <li className="list-item">
+                                    <a className="btn btn-primary cart-icon" data-bs-toggle="offcanvas" href="#cartOffcanvas" role="button" aria-controls="cartOffcanvas">
+                                        <div className="d-flex align-items-center gap-10">
+                                            <div>
+                                                <img src="/images/cart.svg" />
+                                            </div>
+                                            <p className="m-0"><span className="badge rounded-pill text-bg-light">0</span><br /> $100</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -122,6 +115,8 @@ function Header() {
                     </div>
                 </div>
             </header>
+            <CartOffcanvas />
+            <NavOffcanvas />
         </>
     )
 }
