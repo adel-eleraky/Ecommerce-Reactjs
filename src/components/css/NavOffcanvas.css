@@ -1,0 +1,16 @@
+.nav-offcanvas .offcanvas-body .search-span {
+    border-radius: 0 8px 8px 0;
+    background-color: var(--color-febd69);
+}
+.nav-offcanvas .offcanvas-body .menu ul {
+    list-style: none;
+}
+.nav-offcanvas .offcanvas-body ul li {
+    padding: 20px 0;
+    border-bottom: 1px solid #dbd3d3;
+}
+.nav-offcanvas .offcanvas-body ul li a {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
