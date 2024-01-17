@@ -1,0 +1,11 @@
+.mySwiper {
+    height: 500px;
+    margin-bottom: 30px;
+}
+.mySwiper img {
+    width: 100%;
+    height: 100%;
+}
+.mySwiper2 .swiper-wrapper .swiper-slide img {
+    width: 100%;
+}
