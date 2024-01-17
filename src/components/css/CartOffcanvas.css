@@ -1,0 +1,12 @@
+.cart-offcanvas .cart-item img {
+    width: 80px;
+}
+.cart-offcanvas .offcanvas-body .delete-btn {
+    cursor: pointer;
+}
+.cart-offcanvas .offcanvas-body a {
+    background-color: var(--color-49455b);
+}
+.cart-offcanvas .offcanvas-body a:focus {
+    background-color: var(--color-febd69);
+}
