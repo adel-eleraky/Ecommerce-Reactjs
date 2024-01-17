@@ -20,4 +20,8 @@
   .featured-product:hover  .icons {
     right: 5%;
   }
+  .featured-product .add-to-cart {
+    background-color: var(--color-febd69);
+    font-size: 13px;
+  }
   /* end featured products */
