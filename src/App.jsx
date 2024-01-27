@@ -13,7 +13,7 @@ import 'aos/dist/aos.css';
 import Signup from "./pages/Signup"
 import Cart from "./pages/Cart"
 import Product from "./pages/product"
-import { Provider, useSelector } from "react-redux"
+import { Provider } from "react-redux"
 import store from "./rtk/Store"
 
 AOS.init();
