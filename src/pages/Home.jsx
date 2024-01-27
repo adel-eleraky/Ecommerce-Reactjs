@@ -8,9 +8,23 @@ import Service from '../components/Service';
 import Category from '../components/Category';
 import "./css/Home.css"
 import { Link } from 'react-router-dom';
+import {  useSelector } from 'react-redux';
 
 
 function Home() {
+
+    const products = useSelector(state => state.products)
+
+    const productsCards = products && products.map(product => {
+
+        return (
+            <div key={product.id} className="col-12 col-sm-6 col-md-4 col-lg-3  " >
+                <ProductCard  {...product} />
+            </div> 
+        )
+    })
+    
+
     return (
         <>
             <section className='banner py-5'>
@@ -122,24 +136,7 @@ function Home() {
                         <Link to="/products#top" className='text-dark'>See More Products <i className="bi bi-arrow-right"></i></Link>
                     </div>
                     <div className="row py-3">
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3  " >
-                            <ProductCard />
-                        </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3  ">
-                            <ProductCard />
-                        </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3  ">
-                            <ProductCard />
-                        </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3  ">
-                            <ProductCard />
-                        </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3  ">
-                            <ProductCard />
-                        </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3  ">
-                            <ProductCard />
-                        </div>
+                        {productsCards}
                     </div>
                 </div>
             </section>
