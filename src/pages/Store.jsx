@@ -4,9 +4,20 @@ import StoreSidebar from '../components/StoreSidebar'
 import "./css/Store.css"
 import ProductCard from '../components/ProductCard'
 import ReactStars from 'react-rating-stars-component';
+import { useSelector } from 'react-redux';
 
 
 function Store() {
+
+    const products = useSelector(state => state.products)
+
+    const productsCards = products && products.map(product => {
+        return (
+            <div key={product.id} className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" >
+                <ProductCard  {...product} />
+            </div>
+        )
+    })
 
     return (
         <>
@@ -100,7 +111,8 @@ function Store() {
                             </div>
                             <div className="products-list">
                                 <div className="row">
-                                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                                    {productsCards}
+                                    {/* <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                         <ProductCard />
                                     </div>
                                     <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -117,7 +129,7 @@ function Store() {
                                     </div>
                                     <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                         <ProductCard />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
