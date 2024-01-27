@@ -13,27 +13,33 @@ import 'aos/dist/aos.css';
 import Signup from "./pages/Signup"
 import Cart from "./pages/Cart"
 import Product from "./pages/product"
+import { Provider, useSelector } from "react-redux"
+import store from "./rtk/Store"
 
 AOS.init();
 
 function App() {
 
+
     return (
         <>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Layout />}>
-                        <Route index element={<Home />}/>
-                        <Route path="products" element={<Store />}/>
-                        <Route path="products/:name" element={<Product />} />
-                        <Route path="blog" element={<Blog />}/>
-                        <Route path="login" element={<Login />}/>
-                        <Route path="sign-up" element={<Signup />} />
-                        <Route path="cart" element={<Cart />} />
-                    </Route>
-                </Routes>
-            </BrowserRouter>
+            <Provider store={store} >
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Layout />}>
+                            <Route index element={<Home />} />
+                            <Route path="products" element={<Store />} />
+                            <Route path="products/:name" element={<Product />} />
+                            <Route path="blog" element={<Blog />} />
+                            <Route path="login" element={<Login />} />
+                            <Route path="sign-up" element={<Signup />} />
+                            <Route path="cart" element={<Cart />} />
+                        </Route>
+                    </Routes>
+                </BrowserRouter>
+            </Provider>
         </>
+
     )
 }
 
