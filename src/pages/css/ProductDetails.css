@@ -1,0 +1,18 @@
+.product-page .product-details * {
+    margin-bottom: 15px;
+}
+.product-page .product-details .quantity input[type="number"]{
+    width: 50px;
+    text-align: center;
+}
+.product-page  .add-to-cart {
+    background-color: var(--color-febd69);
+}
+.product-page  .add-to-wishlist {
+    background-color: var(--color-febd69);
+}
+.product-page .description {
+    margin-top: 80px;
+    border-top: 2px solid gray;
+    padding-top: 15px;
+}
