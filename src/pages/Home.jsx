@@ -8,7 +8,7 @@ import Service from '../components/Service';
 import Category from '../components/Category';
 import "./css/Home.css"
 import { Link } from 'react-router-dom';
-import {  useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
 function Home() {
@@ -18,12 +18,10 @@ function Home() {
     const productsCards = products && products.map(product => {
 
         return (
-            <div key={product.id} className="col-12 col-sm-6 col-md-4 col-lg-3  " >
-                <ProductCard  {...product} />
-            </div> 
+            <ProductCard key={product.id} {...product} />
         )
     })
-    
+
 
     return (
         <>
@@ -136,7 +134,13 @@ function Home() {
                         <Link to="/products#top" className='text-dark'>See More Products <i className="bi bi-arrow-right"></i></Link>
                     </div>
                     <div className="row py-3">
-                        {productsCards}
+                        {productsCards.map((card, index) => {
+                            return (
+                                <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3" >
+                                    {card}
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </section>
@@ -192,18 +196,13 @@ function Home() {
                                 <img src="/images/product-offer.png" alt="" className="img-fluid" />
                             </div>
                         </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" >
-                            <ProductCard />
-                        </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" >
-                            <ProductCard />
-                        </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" >
-                            <ProductCard />
-                        </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" >
-                            <ProductCard />
-                        </div>
+                        {productsCards.slice(0,3).map((card, index) => {
+                            return (
+                                <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" >
+                                    {card}
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </section>
