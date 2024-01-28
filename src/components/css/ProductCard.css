@@ -6,6 +6,9 @@
   }
   .featured-product .product-image {
     height: 350px;
+    width: 85%;
+    display: block;
+    margin: auto;
   }
   .featured-product .details {
     height: 100px;
@@ -16,16 +19,15 @@
   
   }
   .featured-product .wish-icon {
-    top: 5%;
-    right: 5%;
+    right: 3%;
   }
   .featured-product .icons {
-    top: 12%;
+    top: 8%;
     right: -20%;
     transition: .5s;
   }
   .featured-product:hover  .icons {
-    right: 5%;
+    right: 3%;
   }
   .featured-product .add-to-cart {
     background-color: var(--color-febd69);
