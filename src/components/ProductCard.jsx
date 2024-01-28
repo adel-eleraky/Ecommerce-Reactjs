@@ -20,7 +20,7 @@ function ProductCard({ id , title , category , description , price , image , rat
                 <img className='img-fluid product-image mb-3' src={image} alt="product img" />
                 <div className="product-content">
                     <div className="product-category mb-3">{category}</div>
-                    <Link to="products/portable-speaker" className='text-dark'>
+                    <Link to={`products/${title}/${id}`} className='text-dark'>
                         <div className="product-name fw-bold mb-3 text-truncate">{title}</div>
                     </Link>
                     <div className="details">{description && description.substring(0 , 75) + "...."}</div>
