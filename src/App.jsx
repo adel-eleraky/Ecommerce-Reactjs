@@ -12,7 +12,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Signup from "./pages/Signup"
 import Cart from "./pages/Cart"
-import Product from "./pages/product"
+import ProductDetails from "./pages/ProductDetails"
 import { Provider } from "react-redux"
 import store from "./rtk/Store"
 
@@ -29,7 +29,7 @@ function App() {
                         <Route path="/" element={<Layout />}>
                             <Route index element={<Home />} />
                             <Route path="products" element={<Store />} />
-                            <Route path="products/:name" element={<Product />} />
+                            <Route path="products/:title/:id" element={<ProductDetails />} />
                             <Route path="blog" element={<Blog />} />
                             <Route path="login" element={<Login />} />
                             <Route path="sign-up" element={<Signup />} />
