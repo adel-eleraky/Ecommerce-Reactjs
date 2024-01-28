@@ -13,7 +13,8 @@ import "./css/ProductSwiper.css"
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
-export default function ProductSwiper() {
+export default function ProductSwiper({images}) {
+    console.log(images)
     const thumbsSwiper = useRef(null);
 
     return (
@@ -31,16 +32,16 @@ export default function ProductSwiper() {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                    <img src={images[0]} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    <img src={images[0]} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    <img src={images[0]} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    <img src={images[0]} />
                 </SwiperSlide>
                 
             </Swiper>
@@ -55,16 +56,16 @@ export default function ProductSwiper() {
                 className="mySwiper2"
             >
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                    <img src={images[0]} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    <img src={images[0]} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    <img src={images[0]} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    <img src={images[0]} />
                 </SwiperSlide>
             </Swiper>
         </>
