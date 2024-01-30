@@ -3,9 +3,13 @@ import React from 'react'
 import ReactStars from "react-rating-stars-component";
 import "./css/ProductCard.css"
 import { Link } from "react-router-dom"
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../rtk/Slices/CartSlice';
 
 function ProductCard({ id , title , category , description , price , image , rating}) {
 
+
+    const dispatch = useDispatch()
 
     return (
         <>
@@ -34,7 +38,7 @@ function ProductCard({ id , title , category , description , price , image , rat
                     <hr />
                     <div className='d-flex justify-content-between align-items-center'>
                         <div className="price fw-bold">${price}</div>
-                        <button className="btn add-to-cart text-dark fw-bold"><i className="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                        <button className="btn add-to-cart text-dark fw-bold" onClick={() => dispatch(addToCart({id , title , image , price , quantity: 1}))}><i className="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
                     </div>
                 </div>
             </div>
