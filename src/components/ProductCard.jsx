@@ -4,9 +4,9 @@ import ReactStars from "react-rating-stars-component";
 import "./css/ProductCard.css"
 import { Link } from "react-router-dom"
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../rtk/Slices/CartSlice';
+import { addToCart } from '../rtk/features/CartSlice';
 
-function ProductCard({ id , title , category , description , price , image , rating}) {
+function ProductCard({ id, title, category, description, price, image, rating }) {
 
 
     const dispatch = useDispatch()
@@ -24,21 +24,21 @@ function ProductCard({ id , title , category , description , price , image , rat
                 <img className='img-fluid product-image mb-3' src={image} alt="product img" />
                 <div className="product-content">
                     <div className="product-category mb-3">{category}</div>
-                    <Link to={`products/${title}/${id}`} className='text-dark'>
+                    <Link to={`/product/${id}`} className='text-dark'>
                         <div className="product-name fw-bold mb-3 text-truncate">{title}</div>
                     </Link>
-                    <div className="details">{description && description.substring(0 , 75) + "...."}</div>
+                    <div className="details">{description?.substring(0, 75) + "...."}</div>
                     <ReactStars
                         count={5}
                         size={24}
-                        value={rating && rating.rate}
+                        value={rating?.rate}
                         edit={false}
                         activeColor="#ffd700"
                     />
                     <hr />
                     <div className='d-flex justify-content-between align-items-center'>
                         <div className="price fw-bold">${price}</div>
-                        <button className="btn add-to-cart text-dark fw-bold" onClick={() => dispatch(addToCart({id , title , image , price , quantity: 1}))}><i className="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                        <button className="btn add-to-cart text-dark fw-bold" onClick={() => dispatch(addToCart({ id, title, image, price, quantity: 1 }))}><i className="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
                     </div>
                 </div>
             </div>
