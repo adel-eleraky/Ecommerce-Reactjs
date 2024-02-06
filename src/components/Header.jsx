@@ -4,11 +4,19 @@ import { Link } from "react-router-dom";
 import "./css/Header.css"
 import CartOffcanvas from "./CartOffcanvas";
 import NavOffcanvas from "./NavOffcanvas";
+import { useSelector } from "react-redux";
 
 
 
 
 function Header() {
+
+    const cart = useSelector(state => state.cart)
+    const categories = useSelector(state => state.categories)
+
+    const cartLength = cart && cart.length
+
+
     return (
         <>
             <header className="first-header">
@@ -66,11 +74,11 @@ function Header() {
                                 </li>
                                 <li className="list-item">
                                     <a className="btn btn-primary cart-icon" data-bs-toggle="offcanvas" href="#cartOffcanvas" role="button" aria-controls="cartOffcanvas">
-                                        <div className="d-flex align-items-center gap-10">
+                                        <div className="d-flex align-items-center gap-10 position-relative">
                                             <div>
                                                 <img src="/images/cart.svg" />
                                             </div>
-                                            <p className="m-0"><span className="badge rounded-pill text-bg-light">0</span><br /> $100</p>
+                                            <span className="badge rounded-pill text-bg-light position-absolute ">{cartLength}</span>
                                         </div>
                                     </a>
                                 </li>
@@ -87,12 +95,14 @@ function Header() {
                                 <button className="btn btn-secondary dropdown-toggle text-white fw-bold border-0 bg-transparent p-0 w-100 d-flex align-items-center justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Shop Categories
                                 </button>
-                                <ul className="dropdown-menu dropdown-menu-dark mt-2 w-100">
-                                    <li><a className="dropdown-item " href="#">Action</a></li>
-                                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li><a className="dropdown-item" href="#">Something else here</a></li>
-                                    <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="#">Separated link</a></li>
+                                <ul className="dropdown-menu dropdown-menu-dark p-0 mt-2 w-100">
+                                    {categories && categories.map((category, index) => {
+                                        return (
+                                            <li className="category-item" key={index}>
+                                                <Link to={`products/${category}`} className="d-block">{category}</Link>
+                                            </li>
+                                        )
+                                    })}
                                 </ul>
                             </div>
                         </div>

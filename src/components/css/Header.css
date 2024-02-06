@@ -23,6 +23,10 @@
     background-color: transparent;
     border: none;
 }
+.second-header .cart-icon .badge {
+    top: -5px;
+    right: -10px;
+}
 @media (min-width: 768px) {
     .second-header .bar-icon {
         display: none;
@@ -45,6 +49,13 @@
 .third-header {
     background-color: var(--color-49455b);
     color: white;
+}
+.third-header .dropdown ul li.category-item {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+.third-header .dropdown-menu {
+    background-color: var(--color-2b273e) !important;
 }
 @media (max-width: 768px) {
     .third-header {
