@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import { Outlet } from "react-router-dom"
 import Footer from './Footer'
 import Header from './Header';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import HashLoader from "react-spinners/HashLoader";
-import { fetchingProducts } from '../rtk/Slices/ProductSlice';
+import { fetchingProducts } from '../rtk/features/ProductSlice';
+import { fetchingCategories } from '../rtk/features/CategorySlice';
 
 function Layout() {
 
@@ -13,9 +14,10 @@ function Layout() {
 
 	const [loading, setLoading] = useState(true)
 
-	React.useEffect(() => {
+	useEffect(() => {
 
-		dispatch(fetchingProducts()).then(() => setLoading(false))
+		dispatch(fetchingProducts())
+		dispatch(fetchingCategories()).then(() => setLoading(false))
 	}, [])
 
 	return (
