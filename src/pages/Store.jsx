@@ -2,22 +2,42 @@
 import React, { useState } from 'react'
 import StoreSidebar from '../components/StoreSidebar'
 import "./css/Store.css"
-import ProductCard from '../components/ProductCard'
 import ReactStars from 'react-rating-stars-component';
 import { useSelector } from 'react-redux';
+import { useParams, useSearchParams, Link } from 'react-router-dom';
+import ProductsFeatures from '../utils/ProductsFeatures';
 
 
 function Store() {
 
     const products = useSelector(state => state.products)
+    const categories = useSelector(state => state.categories)
+    const { category } = useParams()
+    const [searchParams, setSearchParams] = useSearchParams()
+    const rating = searchParams.get("rating")
+    const priceFrom = searchParams.get("priceFrom")
+    const priceTo = searchParams.get("priceTo")
 
-    const productsCards = products && products.map(product => {
-        return (
-            <div key={product.id} className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" >
-                <ProductCard  {...product} />
+    const handleSearchParams = (name, value) => {
+
+        const newSearchParams = new URLSearchParams(searchParams.toString())
+        newSearchParams.set(name, value)
+        setSearchParams(newSearchParams)
+    }
+
+    const reactStarElements = []
+    for (let i = 1; i <= 5; i++) {
+
+        reactStarElements.push(
+            <div key={i} className='rating-element' onClick={() => handleSearchParams("rating", i)}>
+                <ReactStars count={5} size={24} value={i} edit={false} activeColor="#ffd700" />
             </div>
         )
-    })
+    }
+
+    const filteredProducts = products && new ProductsFeatures(products)
+
+    const productsElement = filteredProducts.filterByCategory(category).filterByRating(rating).filterByPrice(priceFrom, priceTo).createProductsElement()
 
     return (
         <>
@@ -32,57 +52,30 @@ function Store() {
                                 <div className="categories bg-white rounded p-3 mb-3">
                                     <h5 className='mb-3'>Shop By Categories</h5>
                                     <ul className="list-unstyled">
-                                        <li className='mb-2 ms-2 fw-light fs-5'>mobiles</li>
-                                        <li className='mb-2 ms-2 fw-light fs-5'>mobiles</li>
-                                        <li className='mb-2 ms-2 fw-light fs-5'>mobiles</li>
-                                        <li className='mb-2 ms-2 fw-light fs-5'>mobiles</li>
+                                        {categories && categories.map((category, index) => {
+                                            return (
+                                                <li className="category-item " key={index}>
+                                                    <Link to={`/products/${category}`} className="d-block text-dark ps-3 mb-2 fw-bold">{category}</Link>
+                                                </li>
+                                            )
+                                        })}
                                     </ul>
                                 </div>
                             </li>
                             <li>
                                 <div className="filter  bg-white rounded p-3 mb-3">
                                     <h5 className='mb-4'>Filter By</h5>
-                                    <div className="Availability py-3 ms-2 mb-3 border-top border-3">
-                                        <h6 className='mb-3'>Availability</h6>
-                                        <div className="form-check">
-                                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                            <label className="form-check-label" htmlFor="flexCheckDefault">
-                                                Default checkbox
-                                            </label>
-                                        </div>
-                                        <div className="form-check">
-                                            <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                                            <label className="form-check-label" htmlFor="flexCheckChecked">
-                                                Checked checkbox
-                                            </label>
-                                        </div>
-                                    </div>
                                     <div className="price py-3 ms-2 mb-3 border-top border-3">
                                         <h6 className='mb-3'>Price</h6>
                                         <div className="inputs d-flex justify-content-between gap-15">
-                                            <input type="number" className="form-control" placeholder="From" />
-                                            <input type="number" className="form-control" placeholder="To" />
-                                        </div>
-                                    </div>
-                                    <div className="brand py-3 ms-2 mb-3 border-top border-3">
-                                        <h6 className='mb-3'>Product Brand</h6>
-                                        <div className="brands d-flex flex-wrap gap-15">
-                                            <span className='bg-secondary-subtle fw-normal py-1 px-2 rounded'>Apple</span>
-                                            <span className='bg-secondary-subtle fw-normal py-1 px-2 rounded'>Redragon</span>
-                                            <span className='bg-secondary-subtle fw-normal py-1 px-2 rounded'>Razer</span>
-                                            <span className='bg-secondary-subtle fw-normal py-1 px-2 rounded'>COSRX</span>
-                                            <span className='bg-secondary-subtle fw-normal py-1 px-2 rounded'>SHARPIE</span>
-                                            <span className='bg-secondary-subtle fw-normal py-1 px-2 rounded'>Apple</span>
+                                            <input type="number" name="priceFrom" className="form-control" placeholder="From" onChange={(e) => handleSearchParams(e.target.name, e.target.value)} />
+                                            <input type="number" name="priceTo" className="form-control" placeholder="To" onChange={(e) => handleSearchParams(e.target.name, e.target.value)} />
                                         </div>
                                     </div>
                                     <div className="rating py-3 ms-2 mb-3 border-top border-3">
                                         <h6 className='mb-3'>Rating</h6>
                                         <div className="ratings">
-                                            <ReactStars count={5} size={24} value={1} edit={false} activeColor="#ffd700" />
-                                            <ReactStars count={5} size={24} value={2} edit={false} activeColor="#ffd700" />
-                                            <ReactStars count={5} size={24} value={3} edit={false} activeColor="#ffd700" />
-                                            <ReactStars count={5} size={24} value={4} edit={false} activeColor="#ffd700" />
-                                            <ReactStars count={5} size={24} value={5} edit={false} activeColor="#ffd700" />
+                                            {reactStarElements}
                                         </div>
                                     </div>
                                 </div>
@@ -107,29 +100,11 @@ function Store() {
                                     <option value="3">Created, old to new</option>
                                     <option value="3">Created, new to old</option>
                                 </select>
-                                <h6 className='mb-0'>20 product</h6>
+                                <h6 className='mb-0'>{productsElement.length} product</h6>
                             </div>
                             <div className="products-list">
                                 <div className="row">
-                                    {productsCards}
-                                    {/* <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                        <ProductCard />
-                                    </div>
-                                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                        <ProductCard />
-                                    </div>
-                                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                        <ProductCard />
-                                    </div>
-                                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                        <ProductCard />
-                                    </div>
-                                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                        <ProductCard />
-                                    </div>
-                                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                        <ProductCard />
-                                    </div> */}
+                                    {productsElement.length != 0 ? productsElement : <div className='fw-bold fs-5 text-center'>No Products Found</div>}
                                 </div>
                             </div>
                         </div>
