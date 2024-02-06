@@ -134,7 +134,7 @@ function Home() {
                         <Link to="/products#top" className='text-dark'>See More Products <i className="bi bi-arrow-right"></i></Link>
                     </div>
                     <div className="row py-3">
-                        {productsCards.map((card, index) => {
+                        {productsCards.slice(0 , 4).map((card, index) => {
                             return (
                                 <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3" >
                                     {card}
@@ -170,24 +170,8 @@ function Home() {
                 <div className="container">
                     <h3 className='mb-3'>Our Popular Products</h3>
                     <div className="row">
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" data-aos="fade-up" data-aos-duration="1000">
-                            <div className="categories rounded  h-100">
-                                <div className="category d-flex align-items-center">
-                                    <img src="/images/watch.jpg" alt="" className="img-fluid" />
-                                    <p className='mb-0 active'>Smart Watch</p>
-                                </div>
-                                <div className="category d-flex align-items-center">
-                                    <img src="/images/watch.jpg" alt="" className="img-fluid" />
-                                    <p className='mb-0'>Smart Watch</p>
-                                </div>
-                                <div className="category d-flex align-items-center">
-                                    <img src="/images/watch.jpg" alt="" className="img-fluid" />
-                                    <p className='mb-0'>Smart Watch</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" data-aos="fade-up" data-aos-duration="1000">
-                            <div className="product-offer h-100 bg-dark p-3 rounded">
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-duration="1000">
+                            <div className="product-offer bg-dark p-3 rounded">
                                 <div className="content text-white">
                                     <p>15% OFF</p>
                                     <h3>Smart Watch</h3>
@@ -198,7 +182,7 @@ function Home() {
                         </div>
                         {productsCards.slice(0,3).map((card, index) => {
                             return (
-                                <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3" >
+                                <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3" >
                                     {card}
                                 </div>
                             )

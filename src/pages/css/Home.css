@@ -34,4 +34,6 @@
   .marquee .row {
     box-shadow: 0 0 17px -7px gray;
   }
-  
+.popular-products .product-offer {
+  height: 97% !important;
+}
