@@ -14,7 +14,7 @@ import "./css/ProductSwiper.css"
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 export default function ProductSwiper({images}) {
-    console.log(images)
+
     const thumbsSwiper = useRef(null);
 
     return (
