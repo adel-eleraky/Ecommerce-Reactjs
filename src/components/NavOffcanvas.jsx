@@ -1,8 +1,12 @@
 import React from 'react'
 import "./css/NavOffcanvas.css"
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 function NavOffcanvas() {
+
+    const categories = useSelector(state => state.categories)
+
     return (
         <>
             <div className="nav-offcanvas offcanvas offcanvas-start" tabIndex="-1" id="navOffcanvas" aria-labelledby="navOffcanvas">
@@ -22,13 +26,23 @@ function NavOffcanvas() {
                                 <div className="accordion" id="accordionExample">
                                     <div className="accordion-item">
                                         <h2 className="accordion-header">
-                                            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <button className="accordion-button fs-5 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                 Shop Categories
                                             </button>
                                         </h2>
                                         <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
-                                                <h4>gdvfdvfdv</h4>
+                                                <ul className='p-0'>
+                                                    {
+                                                        categories && categories.map((category , index) => {
+                                                            return (
+                                                                <li key={index}>
+                                                                    <Link to={`products/${category}`}>{category}</Link>
+                                                                </li>
+                                                            )
+                                                        })
+                                                    }
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>

@@ -1,3 +1,6 @@
+.nav-offcanvas {
+    width: 70% !important;
+}
 .nav-offcanvas .offcanvas-body .search-span {
     border-radius: 0 8px 8px 0;
     background-color: var(--color-febd69);
