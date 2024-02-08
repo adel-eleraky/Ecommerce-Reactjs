@@ -5,16 +5,31 @@ import "./css/ProductCard.css"
 import { Link } from "react-router-dom"
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../rtk/features/CartSlice';
+import { addToWishlist, removeFromWishlist } from '../rtk/features/WishlistSlice';
+import { useState } from 'react';
 
-function ProductCard({ id, title, category, description, price, image, rating }) {
-
+function ProductCard({ id, title, category, description, price, image, rating, wished }) {
 
     const dispatch = useDispatch()
+    const [wish, setWish] = useState(wished || false)
+
+    const WishlistHandler = () => {
+
+        wish ?
+            dispatch(removeFromWishlist({ id }))
+            :
+            dispatch(addToWishlist({ id, title, category, description, price, image, rating }))
+        setWish(prev => !prev)
+    }
 
     return (
         <>
             <div className="featured-product border p-3 mb-3 position-relative rounded" data-aos="fade-up" data-aos-duration="1000">
-                <img src="/images/wish.svg" className='position-absolute wish-icon' />
+                {wish ?
+                    <i className="fa-solid fa-heart position-absolute wish-icon" style={{ color: "#bc1a1a" }} role="button" onClick={WishlistHandler}></i>
+                    :
+                    <i className="fa-regular fa-heart position-absolute wish-icon" role="button" onClick={WishlistHandler}></i>
+                }
                 <div className="icons position-absolute">
                     <img src="/images/prodcompare.svg" className='d-block mb-3' />
                     <img src="/images/view.svg" className='d-block mb-3' />
