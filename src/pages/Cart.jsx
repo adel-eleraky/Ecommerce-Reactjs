@@ -26,8 +26,8 @@ function Cart() {
                     <Link to={`/product/${id}`} className='text-dark'><p>{title?.substring(0, 50) + "..."}</p></Link>
                 </td>
                 <td>{price}$</td>
-                <td><input type="number" name={`${title}-quantity`} value={quantity} onChange={(e) => dispatch(changeQuantity({ id , quantity: e.target.value }))} /></td>
-                <td>{price * quantity}$</td>
+                <td><input type="number" name={`${title}-quantity`} value={quantity} onChange={(e) => dispatch(changeQuantity({ id , quantity: +e.target.value }))} /></td>
+                <td>{(price * quantity).toFixed(2)}$</td>
             </tr>
         )
     })
@@ -62,7 +62,7 @@ function Cart() {
                             </div>
                             <div className="col-12 col-lg-4">
                                 <div className='cart-total'>
-                                    <h3 className='mb-3'>Total Price : {totalPrice}$</h3>
+                                    <h3 className='mb-3'>Total Price : {totalPrice.toFixed(2)}$</h3>
                                     <div className="coupon-card">
                                         <input className='coupon-input' type='text' name='coupon' placeholder='coupon code' />
                                         <button className="btn coupon-btn text-white">Apply Coupon</button>
