@@ -15,6 +15,7 @@ import Cart from "./pages/Cart"
 import ProductDetails from "./pages/ProductDetails"
 import { Provider } from "react-redux"
 import store from "./rtk/Store"
+import Wishlist from "./pages/Wishlist"
 
 AOS.init();
 
@@ -29,11 +30,12 @@ function App() {
                         <Route path="/" element={<Layout />}>
                             <Route index element={<Home />} />
                             <Route path="products/:category?" element={<Store />} />
-                            <Route path="product/:id" element={<ProductDetails />} />
+                            <Route path="product/:productId" element={<ProductDetails />} />
                             <Route path="blog" element={<Blog />} />
                             <Route path="login" element={<Login />} />
                             <Route path="sign-up" element={<Signup />} />
                             <Route path="cart" element={<Cart />} />
+                            <Route path="wishlist" element={<Wishlist />} />
                         </Route>
                     </Routes>
                 </BrowserRouter>
