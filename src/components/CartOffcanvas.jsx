@@ -42,7 +42,7 @@ function CartOffcanvas() {
                         :
                         <>
                             {cartItems}
-                            <div className='total-price mt-3 fw-bold'>Total Price: <span className='price'>{totalPrice}$</span></div>
+                            <div className='total-price mt-3 fw-bold'>Total Price: <span className='price'>{totalPrice.toFixed(2)}$</span></div>
                             < Link to="cart" className="btn text-white d-block text-center w-50 mt-4 mx-auto">View Cart</Link>
                         </>
                     }
