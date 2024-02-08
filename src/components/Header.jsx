@@ -53,7 +53,7 @@ function Header() {
                         <div className="col-10 col-lg-6">
                             <ul className="d-flex justify-content-end align-items-center mb-0">
                                 <li className="list-item">
-                                    <Link>
+                                    <Link to="wishlist">
                                         <div className="d-flex align-items-center gap-10">
                                             <div>
                                                 <img src="/images/wishlist.svg" />
