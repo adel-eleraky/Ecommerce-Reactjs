@@ -2,24 +2,24 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const CartSlice = createSlice({
     name: "cart",
-    initialState: JSON.parse(localStorage.getItem("cart")) || [] ,
+    initialState: JSON.parse(localStorage.getItem("cart")) || [],
     reducers: {
         addToCart: (state, action) => {
 
-            const { id , quantity } = action.payload
+            const { id, quantity } = action.payload
             let newState
 
-            const existingProduct = state.find(product =>  product.id === +id)
+            const existingProduct = state.find(product => product.id === +id)
 
-            if(existingProduct) {
+            if (existingProduct) {
                 newState = state.map(product => {
-                    return product.id === +id ? { ...product , quantity: product.quantity + quantity } : product
+                    return product.id === +id ? { ...product, quantity: product.quantity + quantity } : product
                 })
             } else {
-                newState = [...state , action.payload]
+                newState = [...state, action.payload]
             }
 
-            localStorage.setItem("cart" , JSON.stringify(newState))
+            localStorage.setItem("cart", JSON.stringify(newState))
             return newState
         },
         removeFromCart: (state, action) => {
@@ -30,22 +30,22 @@ const CartSlice = createSlice({
                 return product.id !== +id
             })
 
-            localStorage.setItem("cart" , JSON.stringify(newState))
+            localStorage.setItem("cart", JSON.stringify(newState))
             return newState
         },
-        changeQuantity: (state , action) => {
+        changeQuantity: (state, action) => {
 
-            const { id , quantity } = action.payload
+            const { id, quantity } = action.payload
 
             let newState = state.map(product => {
-                return product.id === +id ? { ...product , quantity } : product
+                return product.id === +id ? { ...product, quantity } : product
             })
 
-            localStorage.setItem("cart" , JSON.stringify(newState))
+            localStorage.setItem("cart", JSON.stringify(newState))
             return newState
         }
     }
 })
 
-export const { addToCart , removeFromCart , changeQuantity } = CartSlice.actions
+export const { addToCart, removeFromCart, changeQuantity } = CartSlice.actions
 export default CartSlice.reducer
