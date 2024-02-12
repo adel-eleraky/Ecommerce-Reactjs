@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import HashLoader from "react-spinners/HashLoader";
 import { fetchingProducts } from '../rtk/features/ProductSlice';
 import { fetchingCategories } from '../rtk/features/CategorySlice';
+import { ToastContainer } from 'react-toastify';
 
 function Layout() {
 
@@ -37,6 +38,7 @@ function Layout() {
 					<Header />
 					<Outlet />
 					<Footer />
+					<ToastContainer />
 				</>
 			}
 		</>
