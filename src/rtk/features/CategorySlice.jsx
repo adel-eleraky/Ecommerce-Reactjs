@@ -7,7 +7,7 @@ export const fetchingCategories = createAsyncThunk(
 
         const options = {
             method: "get",
-            url: "https://fakestoreapi.com/products/categories"
+            url: "https://dummyjson.com/products/categories"
         }
         const result = await axios(options)
         return result.data

@@ -8,7 +8,7 @@ export const fetchingProducts = createAsyncThunk(
 
         const options = {
             method: "get",
-            url: "https://fakestoreapi.com/products"
+            url: "https://dummyjson.com/products?limit=0"
         }
         const result = await axios(options)
         return result.data
