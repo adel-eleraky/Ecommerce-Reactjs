@@ -13,12 +13,12 @@ import { useSelector } from 'react-redux';
 
 function Home() {
 
-    const products = useSelector(state => state.products)
+    const products = useSelector(state => state.products).products
 
     const productsCards = products && products.map(product => {
 
         return (
-            <ProductCard key={product.id} {...product} />
+            <ProductCard key={product.id} {...product}  />
         )
     })
 
@@ -180,7 +180,7 @@ function Home() {
                                 <img src="/images/product-offer.png" alt="" className="img-fluid" />
                             </div>
                         </div>
-                        {productsCards.slice(0,3).map((card, index) => {
+                        {productsCards.slice(10,13).map((card, index) => {
                             return (
                                 <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3" >
                                     {card}
@@ -191,7 +191,7 @@ function Home() {
                 </div>
             </section>
             <section className="marquee py-5">
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row bg-white">
                         <Marquee >
                             <img src="/images/brand-01.png" alt="" className="img-fluid px-4" />
