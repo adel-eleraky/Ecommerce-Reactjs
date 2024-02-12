@@ -31,19 +31,13 @@ export default function ProductSwiper({images}) {
                 modules={[FreeMode, Navigation, Thumbs]}
                 className="mySwiper"
             >
-                <SwiperSlide>
-                    <img src={images[0]} />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={images[0]} />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={images[0]} />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={images[0]} />
-                </SwiperSlide>
-                
+                {images && images.map((image , index) => {
+                    return (
+                        <SwiperSlide key={index}>
+                            <img src={image} />
+                        </SwiperSlide>
+                    )
+                })}
             </Swiper>
             <Swiper
                 onSwiper={swiper => thumbsSwiper.current = swiper}
@@ -55,18 +49,13 @@ export default function ProductSwiper({images}) {
                 modules={[FreeMode, Navigation, Thumbs]}
                 className="mySwiper2"
             >
-                <SwiperSlide>
-                    <img src={images[0]} />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={images[0]} />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={images[0]} />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={images[0]} />
-                </SwiperSlide>
+                {images && images.map((image , index) => {
+                    return (
+                        <SwiperSlide key={index}>
+                            <img src={image} />
+                        </SwiperSlide>
+                    )
+                })}
             </Swiper>
         </>
     );
