@@ -4,6 +4,9 @@
     overflow: hidden;
     background-color: white;
   }
+  .featured-product .badge {
+    background-color: var(--color-febd69) !important;
+  }
   .featured-product .product-image {
     height: 350px;
     width: 85%;
@@ -11,14 +14,15 @@
     margin: auto;
   }
   .featured-product .details {
-    height: 100px;
+    height: 85px;
     overflow: hidden;
   }
-  .featured-product .product-category {
+  .featured-product .product-category,
+  .featured-product .product-brand {
     color: var(--color-db5807);
-  
   }
   .featured-product .wish-icon {
+    position: absolute;
     right: 3%;
   }
   .featured-product .icons {
