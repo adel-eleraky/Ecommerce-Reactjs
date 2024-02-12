@@ -12,7 +12,7 @@ class ProductsFeatures {
     }
 
     filterByRating(rating) {
-        this.products = rating ? this.products.filter(product => product.rating.rate.toString().charAt(0) === rating) : this.products
+        this.products = rating ? this.products.filter(product => product.rating.toString().charAt(0) === rating) : this.products
         return this
     }
 
