@@ -5,20 +5,19 @@ import "./css/Header.css"
 import CartOffcanvas from "./CartOffcanvas";
 import NavOffcanvas from "./NavOffcanvas";
 import { useSelector } from "react-redux";
+import Wishlist from './../pages/Wishlist';
 
 
 
 
 function Header() {
 
-    const cart = useSelector(state => state.cart)
+    const cartLength = useSelector(state => state.cart).length
+    const WishlistLength = useSelector(state => state.wishlist).length
     const categories = useSelector(state => state.categories)
 
-    const cartLength = cart && cart.length
-
-
     return (
-        <>
+        <div>
             <header className="first-header">
                 <div className="container">
                     <div className="row py-2">
@@ -54,11 +53,12 @@ function Header() {
                             <ul className="d-flex justify-content-end align-items-center mb-0">
                                 <li className="list-item">
                                     <Link to="wishlist">
-                                        <div className="d-flex align-items-center gap-10">
+                                        <div className="wishlist d-flex align-items-center gap-10 position-relative">
                                             <div>
                                                 <img src="/images/wishlist.svg" />
                                             </div>
                                             <p className="m-0">Wishlist</p>
+                                            <span className="badge rounded-pill text-bg-light bg-red position-absolute ">{WishlistLength}</span>
                                         </div>
                                     </Link>
                                 </li>
@@ -95,7 +95,7 @@ function Header() {
                                 <button className="btn btn-secondary dropdown-toggle text-white fw-bold border-0 bg-transparent p-0 w-100 d-flex align-items-center justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Shop Categories
                                 </button>
-                                <ul className="dropdown-menu dropdown-menu-dark p-0 mt-2 w-100">
+                                <ul className="dropdown-menu dropdown-menu-dark p-0 mt-2">
                                     {categories && categories.map((category, index) => {
                                         return (
                                             <li className="category-item" key={index}>
@@ -127,7 +127,7 @@ function Header() {
             </header>
             <CartOffcanvas />
             <NavOffcanvas />
-        </>
+        </div>
     )
 }
 

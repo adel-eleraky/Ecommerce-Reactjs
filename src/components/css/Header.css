@@ -27,6 +27,11 @@
     top: -5px;
     right: -10px;
 }
+.second-header .wishlist .badge {
+    top: -5px;
+    left: -10px;
+    background-color: var(--color-febd69) !important;
+}
 @media (min-width: 768px) {
     .second-header .bar-icon {
         display: none;
@@ -50,9 +55,16 @@
     background-color: var(--color-49455b);
     color: white;
 }
+.third-header .dropdown ul.show {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 60vw;
+}
 .third-header .dropdown ul li.category-item {
     padding: 10px;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
 }
 .third-header .dropdown-menu {
     background-color: var(--color-2b273e) !important;
