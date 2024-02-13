@@ -35,7 +35,7 @@ function Cart() {
 
     const cartItems = cart && cart.map((item, index) => {
 
-        const { id, title, thumbnail, price, quantity } = item
+        const { id, title, thumbnail, priceAfterDiscount, quantity } = item
 
         return (
             <tr key={id}>
@@ -44,9 +44,9 @@ function Cart() {
                     <img src={thumbnail} alt="" className="img-fluid product-img d-block mx-3" />
                     <Link to={`/product/${id}`} className='text-dark'><p>{title?.substring(0, 50) + "..."}</p></Link>
                 </td>
-                <td>{price}$</td>
+                <td>{priceAfterDiscount.toFixed(2)}$</td>
                 <td><input type="number" name={`${title}-quantity`} value={quantity} onChange={(e) => dispatch(changeQuantity({ id, quantity: +e.target.value }))} /></td>
-                <td>{(price * quantity).toFixed(2)}$</td>
+                <td>{(priceAfterDiscount * quantity).toFixed(2)}$</td>
             </tr>
         )
     })
