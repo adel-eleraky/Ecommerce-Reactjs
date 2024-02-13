@@ -8,13 +8,11 @@ import { useSelector } from "react-redux";
 import Wishlist from './../pages/Wishlist';
 
 
-
-
 function Header() {
 
     const cartLength = useSelector(state => state.cart).length
     const WishlistLength = useSelector(state => state.wishlist).length
-    const categories = useSelector(state => state.categories)
+    const categories = useSelector(state => state.categories.data)
 
     return (
         <div>
