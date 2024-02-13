@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 function NavOffcanvas() {
 
-    const categories = useSelector(state => state.categories)
+    const categories = useSelector(state => state.categories.data)
 
     return (
         <>
