@@ -1,17 +1,17 @@
-.mySwiper {
+.product-page .mySwiper {
     height: 500px;
     margin-bottom: 5px;
 }
-.mySwiper img {
+.product-page .mySwiper img {
     width: 80%;
     height: 80%;
     display: block;
     margin: auto;
 }
-.mySwiper2 .swiper-wrapper .swiper-slide img {
+.product-page .mySwiper2 .swiper-wrapper .swiper-slide img {
     width: 100%;
 }
-.swiper-button-prev ,
-.swiper-button-next {
+.product-page .swiper-button-prev ,
+.product-page .swiper-button-next {
     color: black;
 }
