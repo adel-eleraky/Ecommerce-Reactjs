@@ -9,16 +9,24 @@ import Category from '../components/Category';
 import "./css/Home.css"
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode, Pagination } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+
 
 
 function Home() {
 
-    const products = useSelector(state => state.products).products
+    const products = useSelector(state => state.products.data.products)
 
     const productsCards = products && products.map(product => {
 
         return (
-            <ProductCard key={product.id} {...product}  />
+            <ProductCard key={product.id} {...product} />
         )
     })
 
@@ -129,19 +137,46 @@ function Home() {
             </section>
             <section className="featured-collection py-4">
                 <div className="container">
-                    <div className="d-flex justify-content-between align-items-center">
-                        <h3>Featured Collection</h3>
-                        <Link to="/products#top" className='text-dark'>See More Products <i className="bi bi-arrow-right"></i></Link>
+                    <div className="d-flex justify-content-between align-items-center mb-3">
+                        <h3 className='mb-0'>Featured Collection</h3>
+                        <Link to="products" className="btn store-btn fw-bold">
+                            See More <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                        </Link>
                     </div>
-                    <div className="row py-3">
-                        {productsCards.slice(0 , 4).map((card, index) => {
-                            return (
-                                <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3" >
-                                    {card}
-                                </div>
-                            )
-                        })}
-                    </div>
+                    <>
+                        <Swiper
+                            spaceBetween={20}
+                            grabCursor={true}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            freeMode={true}
+                            modules={[FreeMode, Pagination]}
+                            breakpoints={{
+                                500: {
+                                    slidesPerView: 1
+                                },
+                                600: {
+                                    slidesPerView: 2
+                                },
+                                992: {
+                                    slidesPerView: 3
+                                },
+                                1200: {
+                                    slidesPerView: 4
+                                }
+                            }}
+                            className="mySwiper"
+                        >
+                            {productsCards?.slice(0, 7).map((card, index) => {
+                                return (
+                                    <SwiperSlide key={index}>
+                                        {card}
+                                    </SwiperSlide>
+                                )
+                            })}
+                        </Swiper>
+                    </>
                 </div>
             </section>
             <section className="special-products py-5">
@@ -180,7 +215,7 @@ function Home() {
                                 <img src="/images/product-offer.png" alt="" className="img-fluid" />
                             </div>
                         </div>
-                        {productsCards.slice(10,13).map((card, index) => {
+                        {productsCards?.slice(10, 13).map((card, index) => {
                             return (
                                 <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3" >
                                     {card}
