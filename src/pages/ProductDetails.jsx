@@ -14,12 +14,12 @@ function ProductDetails() {
     const dispatch = useDispatch()
     const [quantity, setQuantity] = useState(1)
 
-    const products = useSelector(state => state.products).products
+    const products = useSelector(state => state.products.data.products)
     const wishlist = useSelector(state => state.wishlist)
 
     const { productId } = useParams()
-    const productDetails = products.filter(product => product.id === +productId)[0]
-    const { id, title, category, description, price, thumbnail, images, rating, brand, stock } = productDetails
+    const productDetails = products?.filter(product => product.id === +productId)[0]
+    const { id, title, category, description, price, thumbnail, images, rating, brand, stock, discountPercentage } = productDetails
 
     const isProductInWishlist = wishlist.some(product => product.id === +productId)
     const [wish, setWish] = useState(isProductInWishlist || false)
@@ -52,7 +52,8 @@ function ProductDetails() {
     }
 
     const addToCartHandler = () => {
-        dispatch(addToCart({ id, title, price, thumbnail, quantity }))
+        const priceAfterDiscount = price * (100 - discountPercentage) / 100
+        dispatch(addToCart({ id, title, price, discountPercentage, priceAfterDiscount, thumbnail, quantity }))
         notifyAddToCart()
     }
 
@@ -80,6 +81,8 @@ function ProductDetails() {
                             <div className="content">
                                 <h3 className="name border-bottom pb-2">{title}</h3>
                                 <h4 className="price">Price: {price}$</h4>
+                                <h4 className='discount'>Discount: -{discountPercentage}%</h4>
+                                <h4 className='price-after-discount'>Price after Discount: {price * (100 - discountPercentage) / 100}$</h4>
                                 <h4 className="rating">Rating: {rating}
                                     <ReactStars
                                         count={5}
