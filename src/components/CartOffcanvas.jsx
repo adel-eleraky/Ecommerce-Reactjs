@@ -36,7 +36,7 @@ function CartOffcanvas() {
 
     const cartItems = cart && cart.map((item, index) => {
 
-        const { id, title, thumbnail, price, quantity } = item
+        const { id, title, thumbnail, priceAfterDiscount, quantity } = item
 
         return (
             <div key={index} className="cart-item d-flex justify-content-around align-items-center">
@@ -44,7 +44,7 @@ function CartOffcanvas() {
                 <img src={thumbnail} alt="" className="img-fluid" />
                 <div className="content text-center flex-grow-1">
                     <h5 className='title'>{title}</h5>
-                    <span className="price">{quantity} * {price}$</span>
+                    <span className="price">{quantity} * {priceAfterDiscount.toFixed(2)}$</span>
                 </div>
             </div>
         )
