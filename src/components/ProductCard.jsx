@@ -45,7 +45,8 @@ function ProductCard({ id, title, brand, category, description, discountPercenta
 
     const dispatch = useDispatch()
     const addToCartHandler = () => {
-        dispatch(addToCart({ id, title, price, thumbnail, quantity: 1 }))
+        const priceAfterDiscount = price * (100 - discountPercentage) / 100
+        dispatch(addToCart({ id, title, price, discountPercentage, priceAfterDiscount, thumbnail, quantity: 1 }))
         notifyAddToCart()
     }
 
