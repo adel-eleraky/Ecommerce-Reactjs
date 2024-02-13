@@ -37,3 +37,9 @@
 .popular-products .product-offer {
   height: 97% !important;
 }
+.featured-collection .swiper-free-mode > .swiper-wrapper {
+  margin-bottom: 25px;
+}
+.featured-collection .store-btn {
+  background-color: var(--color-febd69);
+}
