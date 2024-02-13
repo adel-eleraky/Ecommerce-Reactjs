@@ -36,8 +36,14 @@ const CartSlice = createSlice({
         changeQuantity: (state, action) => {
 
             const { id, quantity } = action.payload
+            let newState;
+            
+            if(quantity === 0) {
+                newState = state.filter(product => product.id !== +id)
+                return newState
+            }
 
-            let newState = state.map(product => {
+            newState = state.map(product => {
                 return product.id === +id ? { ...product, quantity } : product
             })
 
