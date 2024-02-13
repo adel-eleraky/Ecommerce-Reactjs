@@ -6,6 +6,10 @@ class ProductsFeatures {
         this.products = products
     }
 
+    paginate(page) {
+        this.products = page ? this.products.slice((page - 1) * 10, page * 10) : this.products
+        return this
+    }
     filterByCategory(category) {
         this.products = category ? this.products.filter(product => product.category === category) : this.products
         return this
