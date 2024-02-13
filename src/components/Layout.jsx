@@ -3,7 +3,7 @@ import React, { useState , useEffect } from 'react'
 import { Outlet } from "react-router-dom"
 import Footer from './Footer'
 import Header from './Header';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import HashLoader from "react-spinners/HashLoader";
 import { fetchingProducts } from '../rtk/features/ProductSlice';
 import { fetchingCategories } from '../rtk/features/CategorySlice';
@@ -12,28 +12,29 @@ import { ToastContainer } from 'react-toastify';
 function Layout() {
 
 	const dispatch = useDispatch()
-
-	const [loading, setLoading] = useState(true)
+	const productsLoading  = useSelector(state => state.products.loading)
+	const categoriesLoading  = useSelector(state => state.categories.loading)
 
 	useEffect(() => {
 
 		dispatch(fetchingProducts())
-		dispatch(fetchingCategories()).then(() => setLoading(false))
+		dispatch(fetchingCategories())
 	}, [])
 
 	return (
 		<>
-			{loading ?
+			{productsLoading || categoriesLoading ?
 				<div className='loading-screen position-absolute top-50 start-50 translate-middle'>
 					<HashLoader
 						color={"#2b273e"}
-						loading={loading}
+						loading={true}
 						cssOverride={true}
 						size={150}
 						aria-label="Loading Spinner"
 						data-testid="loader"
 					/>
-				</div> :
+				</div>
+				:
 				<>
 					<Header />
 					<Outlet />
