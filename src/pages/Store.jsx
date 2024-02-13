@@ -7,22 +7,32 @@ import { useSelector } from 'react-redux';
 import { useParams, useSearchParams, Link } from 'react-router-dom';
 import ProductsFeatures from '../utils/ProductsFeatures';
 
-
 function Store() {
 
-    const products = useSelector(state => state.products).products
-    const categories = useSelector(state => state.categories)
+    const products = useSelector(state => state.products.data.products)
+    const categories = useSelector(state => state.categories.data)
     const { category } = useParams()
     const [searchParams, setSearchParams] = useSearchParams()
     const rating = searchParams.get("rating")
     const priceFrom = searchParams.get("priceFrom")
     const priceTo = searchParams.get("priceTo")
+    const page = searchParams.get("page")
 
     const handleSearchParams = (name, value) => {
 
         const newSearchParams = new URLSearchParams(searchParams.toString())
         newSearchParams.set(name, value)
         setSearchParams(newSearchParams)
+    }
+
+    const paginationItems = [
+        <li key={1} className="page-item"><a className="page-link" role="button" onClick={() => handleSearchParams("page", (+page - 1))}>Previous</a></li>,
+        <li key={2} className="page-item"><a className="page-link" role="button" onClick={() => handleSearchParams("page", (+page + 1))}>Next</a></li>
+    ]
+    for (let i = 1; i <= (products && products.length / 10); i++) {
+        paginationItems.splice(i, 0,
+            <li key={i + 2} className="page-item"><a className="page-link" role="button" onClick={() => handleSearchParams("page", i)}>{i}</a></li>
+        )
     }
 
     const reactStarElements = []
@@ -35,9 +45,8 @@ function Store() {
         )
     }
 
-    const filteredProducts = products && new ProductsFeatures(products)
-
-    const productsElement = filteredProducts.filterByCategory(category).filterByRating(rating).filterByPrice(priceFrom, priceTo).createProductsElement()
+    const filteredProducts = new ProductsFeatures(products)
+    const productsElement = products && filteredProducts.paginate(page).filterByCategory(category).filterByRating(rating).filterByPrice(priceFrom, priceTo).createProductsElement()
 
     return (
         <>
@@ -100,11 +109,18 @@ function Store() {
                                     <option value="3">Created, old to new</option>
                                     <option value="3">Created, new to old</option>
                                 </select>
-                                <h6 className='mb-0'>{productsElement.length} product</h6>
+                                <h6 className='mb-0'>{productsElement?.length} product</h6>
                             </div>
                             <div className="products-list">
                                 <div className="row">
-                                    {productsElement.length != 0 ? productsElement : <div className='fw-bold fs-5 text-center'>No Products Found</div>}
+                                    {productsElement?.length != 0 ? productsElement?.slice(0, 10) : <div className='fw-bold fs-5 text-center'>No Products Found</div>}
+                                    <div className='mt-3'>
+                                        <nav aria-label="Page navigation example " className='w-50 m-auto '>
+                                            <ul className="pagination justify-content-center">
+                                                {paginationItems}
+                                            </ul>
+                                        </nav>
+                                    </div>
                                 </div>
                             </div>
                         </div>
