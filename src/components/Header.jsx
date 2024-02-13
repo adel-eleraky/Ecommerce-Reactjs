@@ -5,8 +5,6 @@ import "./css/Header.css"
 import CartOffcanvas from "./CartOffcanvas";
 import NavOffcanvas from "./NavOffcanvas";
 import { useSelector } from "react-redux";
-import Wishlist from './../pages/Wishlist';
-
 
 function Header() {
 
