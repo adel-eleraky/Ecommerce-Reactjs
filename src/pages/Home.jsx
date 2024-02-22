@@ -2,7 +2,6 @@
 import React from 'react'
 import ProductCard from '../components/ProductCard'
 import Marquee from 'react-fast-marquee';
-import BlogCard from '../components/BlogCard';
 import SpecialProduct from '../components/SpecialProduct';
 import Service from '../components/Service';
 import Category from '../components/Category';
@@ -12,12 +11,12 @@ import { useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination } from 'swiper/modules';
 
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-
-
+import ContactForm from '../components/ContactForm';
 
 function Home() {
 
@@ -241,21 +240,19 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section className="blog py-3">
-                <div className="container">
-                    <h3 className='mb-3'>Out Latest News</h3>
-                    <div className="row">
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 " >
-                            <BlogCard />
-                        </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 " >
-                            <BlogCard />
-                        </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 " >
-                            <BlogCard />
-                        </div>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 " >
-                            <BlogCard />
+            <section className="contact pt-5 position-relative">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.5851960224!2d0.06320772451059684!3d51.52852620113951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2z2YTZhtiv2YbYjCDYp9mE2YXZhdmE2YPYqSDYp9mE2YXYqtit2K_YqQ!5e0!3m2!1sar!2seg!4v1708626335856!5m2!1sar!2seg"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div className="container position-absolute top-50 start-50 translate-middle">
+                    <div className="row justify-content-center">
+                        <div className="col-10 col-md-8 col-lg-6">
+                            <div className="p-3 rounded contact-form text-white">
+                                <h4 className='text-center'>Contact US</h4>
+                                <ContactForm />
+                            </div>
                         </div>
                     </div>
                 </div>
