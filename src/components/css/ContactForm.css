@@ -1,0 +1,7 @@
+.contact .contact-form {
+    background-color: var(--color-2b273e);
+}
+.contact .contact-form .submit-btn{
+    background-color: var(--color-febd69);
+    width: 200px;
+}
