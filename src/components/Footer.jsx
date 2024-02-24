@@ -30,7 +30,7 @@ function Footer() {
                         <div className="col-12 col-sm-6 col-lg-3 mb-5 m-lg-0">
                             <h3 className='fw-bold mb-4'>Contact Us</h3>
                             <div className="contact-information">
-                                <p  className='m-0'>Demo Store</p>
+                                <p className='m-0'>Demo Store</p>
                                 <address className='m-0'>NO. 12459 Freedom, New York, 1111</address>
                                 <p >United States</p>
                                 <a href='tel:+201554138144' className='d-block mb-2'>tel: +201554138144</a>
@@ -74,7 +74,9 @@ function Footer() {
                 </div>
             </footer>
             <footer className="third-footer text-center py-3">
-                <p className='m-0'>&copy; {new Date().getFullYear()}, Digitic Designed by<span className='text-danger fw-bold ms-2 creator-name'> adel-el3raky </span></p>
+                <p className='m-0'>&copy; {new Date().getFullYear()}, Digitic Designed by
+                    <span className='fw-bold ms-2 creator-name'> <a href="https://www.linkedin.com/in/adel-eleraky/" target="_blank">adel-el3raky</a> </span>
+                </p>
             </footer>
         </>
     )
