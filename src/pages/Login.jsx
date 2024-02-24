@@ -28,6 +28,7 @@ function Login() {
                                 <h6 className='text-center mb-3'>Login With Social Media Account</h6>
                                 <div className="social-icons d-flex justify-content-center gap-15 mb-4">
                                     <div className="facebook-icon"><i className="fa-brands fa-facebook fs-1"></i></div>
+                                    <div className="twitter-icon"><i className="fa-brands fa-twitter fs-1"></i></div>
                                     <div className="google-icon"><i className="fa-brands fa-google fs-1"></i></div>
                                 </div>
                                 <h6 className='text-center mb-3'>Don't Have Account ? </h6>
