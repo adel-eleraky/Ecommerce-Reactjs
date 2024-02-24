@@ -20,8 +20,19 @@ function Header() {
                         <div className="col-md-7 mb-3 mb-md-0">
                             Free shipping over 100$ and free return
                         </div>
-                        <a href="tel:+201554138144" className="col-md-5 text-white">
-                            Hotline: +20 1554138144
+                        <a className="col-md-5 text-white">
+                            <a href="https://github.com/adel-eleraky" target="_blank">
+                                <i class="fs-3 me-4 fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/adel-eleraky/" target="_blank">
+                                <i class="fs-3 me-4 fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.facebook.com/adel.el3raky" target="_blank">
+                                <i class="fs-3 me-4 fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="">
+                                <i class="fs-3 me-4 fa-brands fa-twitter"></i>
+                            </a>
                         </a>
                     </div>
                 </div>
