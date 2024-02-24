@@ -63,8 +63,8 @@ function Store() {
                                     <ul className="list-unstyled">
                                         {categories && categories.map((category, index) => {
                                             return (
-                                                <li className="category-item " key={index}>
-                                                    <Link to={`/products/${category}`} className="d-block text-dark ps-3 mb-2 fw-bold">{category}</Link>
+                                                <li className="category-item border-bottom py-2" key={index}>
+                                                    <Link to={`/products/${category}`} className="d-block text-dark ps-3 fw-bold">{category}</Link>
                                                 </li>
                                             )
                                         })}
