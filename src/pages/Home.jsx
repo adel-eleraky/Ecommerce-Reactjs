@@ -105,36 +105,32 @@ function Home() {
                 </div>
             </section>
             <section className="categories py-5">
-                <div className="container">
-                    <div className="row bg-white" >
-                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                            <Category img="laptop.jpg" title="computers & laptop" numOfItems="8" />
-                        </div>
-                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                            <Category img="camera.jpg" title="Cameras & videos" numOfItems="10" />
-                        </div>
-                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                            <Category img="tv.jpg" title="smart television" numOfItems="12" />
-                        </div>
-                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                            <Category img="tv.jpg" title="smartwatches" numOfItems="13" />
-                        </div>
-                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                            <Category img="tv.jpg" title="Mobile & tablets" numOfItems="9" />
-                        </div>
-                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                            <Category img="headphone.jpg" title="Headphones" numOfItems="8" />
-                        </div>
-                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                            <Category img="acc.jpg" title="Accessories" numOfItems="8" />
-                        </div>
-                        <div className="category col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                            <Category img="speaker.jpg" title="portable Speakers" numOfItems="8" />
-                        </div>
+                <div className="container-fluid">
+                    <div className="row" >
+                        <Marquee className='bg-white py-3' style={{ marginBottom: "30px", boxShadow: "0 0 17px -7px gray" }}>
+                            <Category img="laptop.jpg" title="computers & laptop" />
+                            <Category img="acc.jpg" title="Accessories" />
+                            <Category img="camera.jpg" title="Cameras & videos" />
+                            <Category img="tv.jpg" title="smart television" />
+                            <Category img="headphone.jpg" title="Headphones" />
+                            <Category img="speaker.jpg" title="portable Speakers" />
+                            <Category img="motorcycle.jpg" title="motorcycle" />
+                            <Category img="watches.jpg" title="watches" />
+                        </Marquee>
+                        <Marquee className='bg-white py-3' direction='right' style={{ boxShadow: "0 0 17px -7px gray" }}>
+                            <Category img="laptop.jpg" title="computers & laptop" />
+                            <Category img="acc.jpg" title="Accessories" />
+                            <Category img="camera.jpg" title="Cameras & videos" />
+                            <Category img="tv.jpg" title="smart television" />
+                            <Category img="headphone.jpg" title="Headphones" />
+                            <Category img="speaker.jpg" title="portable Speakers" />
+                            <Category img="motorcycle.jpg" title="motorcycle" />
+                            <Category img="watches.jpg" title="watches" />
+                        </Marquee>
                     </div>
                 </div>
             </section>
-            <section className="featured-collection py-4">
+            <section className="featured-collection py-4" data-aos="fade-up" data-aos-duration="3000">
                 <div className="container">
                     <div className="d-flex justify-content-between align-items-center mb-3">
                         <h3 className='mb-0'>Featured Collection</h3>
@@ -176,28 +172,6 @@ function Home() {
                             })}
                         </Swiper>
                     </>
-                </div>
-            </section>
-            <section className="special-products py-5">
-                <div className="container">
-                    <h3 className='mb-3'>Special Products</h3>
-                    <div className="row">
-                        <div className="col-12 col-lg-6 col-xl-4 mb-2  " data-aos="fade-up" >
-                            <SpecialProduct />
-                        </div>
-                        <div className="col-12 col-lg-6 col-xl-4 mb-2  " data-aos="fade-up" >
-                            <SpecialProduct />
-                        </div>
-                        <div className="col-12 col-lg-6 col-xl-4 mb-2  " data-aos="fade-up" >
-                            <SpecialProduct />
-                        </div>
-                        <div className="col-12 col-lg-6 col-xl-4 mb-2  " data-aos="fade-up" >
-                            <SpecialProduct />
-                        </div>
-                        <div className="col-12 col-lg-6 col-xl-4 mb-2  " data-aos="fade-up" >
-                            <SpecialProduct />
-                        </div>
-                    </div>
                 </div>
             </section>
             <section className="popular-products">
