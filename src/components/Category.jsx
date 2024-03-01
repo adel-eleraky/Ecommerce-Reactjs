@@ -6,12 +6,11 @@ import "./css/Category.css"
 function Category({ img, title, numOfItems }) {
   return (
     <>
-      <div className="content d-flex align-items-center">
+      <div className="category content d-flex flex-column justify-content-between align-items-center  mx-5">
+        <img src={`/images/${img}`} className='img-fluid'/>
         <div>
           <h6>{title}</h6>
-          <p>{numOfItems} Items</p>
         </div>
-        <img src={`/images/${img}`} />
       </div>
     </>
   )
