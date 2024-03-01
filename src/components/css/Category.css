@@ -1,11 +1,10 @@
 
 /* start categories */
-
-.category .content > div {
-    width: 50%;
-  }
-  .category .content {
-    justify-content: center;
-  }
-  
+.category {
+  height: 175px;
+}
+.category img {
+  width: 155px !important;
+  height: 145px !important;
+}
   /* end categories */
