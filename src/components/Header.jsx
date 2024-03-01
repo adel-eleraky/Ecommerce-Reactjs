@@ -20,20 +20,20 @@ function Header() {
                         <div className="col-md-7 mb-3 mb-md-0">
                             Free shipping over 100$ and free return
                         </div>
-                        <a className="col-md-5 text-white">
+                        <div className="col-md-5 text-white">
                             <a href="https://github.com/adel-eleraky" target="_blank">
-                                <i class="fs-3 me-4 fa-brands fa-github"></i>
+                                <i className="fs-3 me-4 fa-brands fa-github"></i>
                             </a>
                             <a href="https://www.linkedin.com/in/adel-eleraky/" target="_blank">
-                                <i class="fs-3 me-4 fa-brands fa-linkedin"></i>
+                                <i className="fs-3 me-4 fa-brands fa-linkedin"></i>
                             </a>
                             <a href="https://www.facebook.com/adel.el3raky" target="_blank">
-                                <i class="fs-3 me-4 fa-brands fa-facebook"></i>
+                                <i className="fs-3 me-4 fa-brands fa-facebook"></i>
                             </a>
                             <a href="">
-                                <i class="fs-3 me-4 fa-brands fa-twitter"></i>
+                                <i className="fs-3 me-4 fa-brands fa-twitter"></i>
                             </a>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -120,9 +120,6 @@ function Header() {
                                 </Link>
                                 <Link to="products" className="me-3 text-white">
                                     OUR STORE
-                                </Link>
-                                <Link to="blog" className="me-3 text-white">
-                                    BLOG
                                 </Link>
                                 <Link className="me-3 text-white">
                                     CONTACT
