@@ -26,15 +26,15 @@ function NavOffcanvas() {
                                 <div className="accordion" id="accordionExample">
                                     <div className="accordion-item">
                                         <h2 className="accordion-header">
-                                            <button className="accordion-button fs-5 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <button className="accordion-button fs-5 fw-bold collapsed border border-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                 Shop Categories
                                             </button>
                                         </h2>
-                                        <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div id="collapseOne" className="accordion-collapse collapse " data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
                                                 <ul className='p-0'>
                                                     {
-                                                        categories && categories.map((category , index) => {
+                                                        categories && categories.map((category, index) => {
                                                             return (
                                                                 <li key={index}>
                                                                     <Link to={`products/${category}`}>{category}</Link>
@@ -50,7 +50,6 @@ function NavOffcanvas() {
                             </li>
                             <li><Link to="">Home</Link></li>
                             <li><Link to="products">Our Store</Link></li>
-                            <li><Link to="blog">Blog</Link></li>
                             <li><Link to="contact">Contact</Link></li>
                         </ul>
                     </div>
