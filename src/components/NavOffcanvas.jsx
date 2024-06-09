@@ -37,7 +37,7 @@ function NavOffcanvas() {
                                                         categories && categories.map((category, index) => {
                                                             return (
                                                                 <li key={index}>
-                                                                    <Link to={`products/${category}`}>{category}</Link>
+                                                                    <Link to={`products/${category.slug}`}>{category.name}</Link>
                                                                 </li>
                                                             )
                                                         })

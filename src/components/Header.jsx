@@ -21,13 +21,13 @@ function Header() {
                             Free shipping over 100$ and free return
                         </div>
                         <div className="col-md-5 text-white">
-                            <a href="https://github.com/adel-eleraky" target="_blank">
+                            <a href="https://github.com/adel-eleraky" target="_blank" rel="noreferrer">
                                 <i className="fs-3 me-4 fa-brands fa-github"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/adel-eleraky/" target="_blank">
+                            <a href="https://www.linkedin.com/in/adel-eleraky/" target="_blank" rel="noreferrer">
                                 <i className="fs-3 me-4 fa-brands fa-linkedin"></i>
                             </a>
-                            <a href="https://www.facebook.com/adel.el3raky" target="_blank">
+                            <a href="https://www.facebook.com/adel.el3raky" target="_blank" rel="noreferrer">
                                 <i className="fs-3 me-4 fa-brands fa-facebook"></i>
                             </a>
                             <a href="">
@@ -45,7 +45,9 @@ function Header() {
                                 <button className="btn btn-primary bar-icon p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navOffcanvas" aria-controls="navOffcanvas">
                                     <i className="fa-solid fa-bars fs-3"></i>
                                 </button>
-                                <h2 className="d-inline-block mb-0 ms-3 site-title">Digitic.</h2>
+                                <Link to="/">
+                                    <h2 className="d-inline-block mb-0 ms-3 site-title">Digitic.</h2>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-4 search-col">
@@ -106,7 +108,7 @@ function Header() {
                                     {categories && categories.map((category, index) => {
                                         return (
                                             <li className="category-item" key={index}>
-                                                <Link to={`products/${category}`} className="d-block">{category}</Link>
+                                                <Link to={`products/${category.slug}`} className="d-block">{category.name}</Link>
                                             </li>
                                         )
                                     })}

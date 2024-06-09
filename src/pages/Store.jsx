@@ -64,7 +64,7 @@ function Store() {
                                         {categories && categories.map((category, index) => {
                                             return (
                                                 <li className="category-item border-bottom py-2" key={index}>
-                                                    <Link to={`/products/${category}`} className="d-block text-dark ps-3 fw-bold">{category}</Link>
+                                                    <Link to={`/products/${category.slug}`} className="d-block text-dark ps-3 fw-bold">{category.name}</Link>
                                                 </li>
                                             )
                                         })}
