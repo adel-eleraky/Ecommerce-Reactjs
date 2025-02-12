@@ -113,7 +113,7 @@ function Store() {
                             </div>
                             <div className="products-list">
                                 <div className="row">
-                                    {productsElement?.length != 0 ? productsElement?.slice(0, 10) : <div className='fw-bold fs-5 text-center'>No Products Found</div>}
+                                    {productsElement?.length != 0 ? productsElement?.slice(0, 9) : <div className='fw-bold fs-5 text-center'>No Products Found</div>}
                                     <div className='mt-3'>
                                         <nav aria-label="Page navigation example " className='w-50 m-auto '>
                                             <ul className="pagination justify-content-center">
