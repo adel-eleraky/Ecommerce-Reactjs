@@ -4,3 +4,24 @@
 .sidebar .rating-element {
     cursor: pointer;
 }
+
+.sidebar .categories .category-item {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.sidebar .category-item:hover {
+    background-color: #febd69;
+    border-radius: 5px;
+}
+
+.sidebar .categories {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.5s ease;
+}
+
+.sidebar #category-accordion.active .categories {
+    max-height: 700px;
+    padding: 10px 5px;
+}
