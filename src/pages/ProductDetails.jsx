@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../rtk/features/CartSlice';
 import { addToWishlist, removeFromWishlist } from '../rtk/features/WishlistSlice';
 import { toast } from 'react-toastify';
-
+import img from "./../assets/user.png"
 
 function ProductDetails() {
 
@@ -19,7 +19,7 @@ function ProductDetails() {
 
     const { productId } = useParams()
     const productDetails = products?.filter(product => product.id === +productId)[0]
-    const { id, title, category, description, price, thumbnail, images, rating, brand, stock, discountPercentage } = productDetails
+    const { id, title, category, description, price, thumbnail, reviews, images, rating, brand, stock, discountPercentage } = productDetails
 
     const isProductInWishlist = wishlist.some(product => product.id === +productId)
     const [wish, setWish] = useState(isProductInWishlist || false)
@@ -72,7 +72,7 @@ function ProductDetails() {
     return (
         <>
             <div className="product-page py-5">
-                <div className="container">
+                <div className="container bg-white p-4 rounded">
                     <div className="row">
                         <div className="col-12 col-md-6 mb-5 mb-md-0">
                             <ProductSwiper images={images} />
@@ -110,8 +110,54 @@ function ProductDetails() {
                         <h3>Description</h3>
                         <p>{description}</p>
                     </div>
+                    <div class="reviews border-top py-3">
+                        <h2>Reviews</h2>
+                        <div className="row">
+                            <div className="col-12 col-md-6">
+                                <div class="review_form">
+                                    <h3>Leave a Review</h3>
+                                    <form id="review-form">
+                                        <textarea name="comment" id="review-comment" cols="30" rows="10"
+                                            placeholder="Write a review..."></textarea>
+                                        <div class="rating">
+                                            <label for="rating">Rating</label>
+                                            <input type="number" id="rating" />
+                                        </div>
+                                        <button type="submit">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-6">
+                                <div class="cards">
+                                    {reviews && reviews.map(review => {
+                                        return (
+                                            <div class="review_card">
+                                                <div class="user_details">
+                                                    <img src={img}
+                                                        alt="" className='img-fluid' />
+                                                    <h3>{review.reviewerName}</h3>
+                                                </div>
+                                                <div class="rating">
+                                                    <ReactStars
+                                                        count={5}
+                                                        size={24}
+                                                        value={review.rating}
+                                                        edit={false}
+                                                        activeColor="#ffd700"
+                                                    />
+                                                </div>
+                                                <div class="comment">
+                                                    {review.comment}
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

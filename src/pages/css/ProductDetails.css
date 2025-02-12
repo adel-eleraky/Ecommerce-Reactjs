@@ -16,3 +16,98 @@
     border-top: 2px solid gray;
     padding-top: 15px;
 }
+.product-page .reviews {
+    padding: 20px;
+}
+.product-page .reviews button {
+    width: 350px;
+    height: fit-content;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #febd69;
+}
+.product-page .reviews .reviews_content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+.product-page .review_card .user_details,
+.product-page .review_card .rating,
+.product-page .review_card .comment {
+    margin-bottom: 10px;
+}
+.product-page .reviews .review_card {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.product-page .reviews .review_card .user_details {
+    display: flex;
+    align-items: center;
+}
+.product-page .reviews .review_card img {
+    width: 35px;
+    margin-right: 10px;
+}
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#review-comment {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+}
+
+form .rating {
+    margin-bottom: 15px;
+}
+
+.rating label {
+    font-size: 18px;
+    color: #555;
+}
+.rating input {
+    border: .5px solid;
+    border-radius: 5px;
+    width: 50px;
+    padding: 5px;
+}
+.rating label:hover,
+.rating input:checked + label {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
