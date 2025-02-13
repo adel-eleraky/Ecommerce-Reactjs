@@ -6,6 +6,7 @@ import ReactStars from 'react-rating-stars-component';
 import { useSelector } from 'react-redux';
 import { useParams, useSearchParams, Link } from 'react-router-dom';
 import ProductsFeatures from '../utils/ProductsFeatures';
+import Pagination from '../components/Pagination';
 
 function Store() {
 
@@ -25,16 +26,6 @@ function Store() {
         setSearchParams(newSearchParams)
     }
 
-    const paginationItems = [
-        <li key={1} className="page-item"><a className="page-link" role="button" onClick={() => handleSearchParams("page", (+page - 1))}>Previous</a></li>,
-        <li key={2} className="page-item"><a className="page-link" role="button" onClick={() => handleSearchParams("page", (+page + 1))}>Next</a></li>
-    ]
-    for (let i = 1; i <= (products && products.length / 10); i++) {
-        paginationItems.splice(i, 0,
-            <li key={i + 2} className="page-item"><a className="page-link" role="button" onClick={() => handleSearchParams("page", i)}>{i}</a></li>
-        )
-    }
-
     const reactStarElements = []
     for (let i = 1; i <= 5; i++) {
 
@@ -46,7 +37,7 @@ function Store() {
     }
 
     const filteredProducts = new ProductsFeatures(products)
-    const productsElement = products && filteredProducts.paginate(page).filterByCategory(category).filterByRating(rating).filterByPrice(priceFrom, priceTo).createProductsElement()
+    const productsElement = products && filteredProducts.filterByCategory(category).filterByRating(rating).filterByPrice(priceFrom, priceTo).paginate(page).createProductsElement()
 
     return (
         <>
@@ -115,11 +106,7 @@ function Store() {
                                 <div className="row">
                                     {productsElement?.length != 0 ? productsElement?.slice(0, 9) : <div className='fw-bold fs-5 text-center'>No Products Found</div>}
                                     <div className='mt-3'>
-                                        <nav aria-label="Page navigation example " className='w-50 m-auto '>
-                                            <ul className="pagination justify-content-center">
-                                                {paginationItems}
-                                            </ul>
-                                        </nav>
+                                        <Pagination page={page} products={products} handleSearchParams={handleSearchParams} />
                                     </div>
                                 </div>
                             </div>
