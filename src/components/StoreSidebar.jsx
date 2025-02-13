@@ -52,7 +52,7 @@ function StoreSidebar() {
                             {categories && categories.map((category, index) => {
                                 return (
                                     <p className="category-item mb-0" key={index}>
-                                        <Link to={`/product/${category.slug}`} className="d-block text-dark p-2">{category.name}</Link>
+                                        <Link to={`/products/${category.slug}`} className="d-block text-dark p-2">{category.name}</Link>
                                     </p>
                                 )
                             })}
