@@ -19,7 +19,10 @@ const Pagination = ({ page, products, handleSearchParams }) => {
 
     let paginationItems = [
         <li key="prev" className={`page-item ${page <= 1 ? "disabled" : ""}`}>
-            <a className="page-link" role="button" onClick={() => handleSearchParams("page", page - 1)}>
+            <a className="page-link" role="button" onClick={() => {
+                window.scroll(0, 0)
+                handleSearchParams("page", page - 1)
+            }}>
                 Previous
             </a>
         </li>
@@ -34,7 +37,10 @@ const Pagination = ({ page, products, handleSearchParams }) => {
         ) {
             paginationItems.push(
                 <li key={i} className={`page-item ${page === i ? "active" : ""}`}>
-                    <a className="page-link" role="button" onClick={() => handleSearchParams("page", i)}>
+                    <a className="page-link" role="button" onClick={() => {
+                        window.scroll(0, 0)
+                        handleSearchParams("page", i)
+                    }}>
                         {i}
                     </a>
                 </li>
@@ -53,7 +59,10 @@ const Pagination = ({ page, products, handleSearchParams }) => {
 
     paginationItems.push(
         <li key="next" className={`page-item ${page >= totalPages ? "disabled" : ""}`}>
-            <a className="page-link" role="button" onClick={() => handleSearchParams("page", page + 1)}>
+            <a className="page-link" role="button" onClick={() => {
+                window.scroll(0 , 0)
+                handleSearchParams("page", page + 1)
+            }}>
                 Next
             </a>
         </li>
